@@ -2,26 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  h1 {
+    @apply text-[2.6rem] sm:text-[2.89rem];
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  h2 {
+    @apply text-[2.263rem] sm:text-[2.51rem];
+  }
+
+  h3 {
+    @apply text-[1.967rem] sm:text-[2.19rem];
+  }
+  h4 {
+    @apply text-[1.711rem] sm:text-[1.9rem];
+  }
+
+  h5 {
+    @apply text-[1.487rem] sm:text-[1.66rem];
+  }
+
+  h6 {
+    @apply text-[1.294rem] sm:text-[1.44rem];
+  }
+
+  p {
+    @apply text-[1.125rem] sm:text-[1.25rem];
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .container {
+    @apply mx-auto px-8 sm:px-24;
+  }
+  .glow {
+    box-shadow: 0px 0px 15px 3px rgba(57, 255, 192, 0.836);
+    /* box-shadow: 0px 0px 15px 2px rgb(235, 255, 249); */
+    /* 0px 0px 28px 6px rgba(57, 255, 192, 0.29); */
+    /* -webkit-box-shadow: -1px -2px 28px 6px rgba(57, 255, 192, 0.29);
+    -moz-box-shadow: -1px -2px 28px 6px rgba(57, 255, 192, 0.29); */
+  }
+  .no-glow {
+    box-shadow: none;
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* body {
+    width: 100vw;
+    height: 100vh;
+    background: url("../public/images/background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } */
+
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(128, 128, 128, 0.249);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00adbc;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #39ffc0 ;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #00adbc;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }

@@ -1,7 +1,10 @@
 {
-  "compilerOptions": {
+   "compilerOptions": {
+    "baseUrl":".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@redux/*":["./app/redux/*"],
+
     }
   }
 }
