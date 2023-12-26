@@ -17,8 +17,10 @@ import {
   SiRedux,
   SiReactquery,
 } from "react-icons/si";
+import { AboutPageData, Links, Project, Tools } from "./types/types";
 
-export const links = [
+
+export const links: Links[] = [
   {
     id: 1,
     url: "/",
@@ -45,7 +47,7 @@ export const links = [
   },
 ];
 
-export const skills = [
+export const tools:Tools[] = [
   {
     text: "Next.js",
     icon: <SiNextdotjs className="icon " />,
@@ -89,8 +91,8 @@ export const skills = [
   },
 ];
 
-export const aboutPage = {
-  "about me": {
+export const aboutPageData:AboutPageData = {
+  "about": {
     description: `I'm really passionate about creating websites and web apps that people would love to use. As a web developer, my goal is simple: to build visually stunning, easy-to-navigate sites that leave a positive impression and works seamlessly well. I bring together my programming skills and a strong design sense to make mobile-friendly websites that work like a charm✨. By understanding what businesses need and what users want, I turn ideas into beautiful and functional interfaces. I'm all about improving user experience through user-friendly designs, I'm constantly learning and adapting to the latest trends, aiming to make the web experience better, one click at a time😁.`,
     education: {
       degree: "Bachelor of Technology in Project Management",
@@ -98,7 +100,7 @@ export const aboutPage = {
       date: "2016 - 2023",
     },
   },
-  certifications: [
+  "certifications": [
     {
       name: "Javascript Algorithms and Data Structures",
       issuer: "freeCodeCamp",
@@ -118,7 +120,7 @@ export const aboutPage = {
       url: "https://drive.google.com/file/d/16fDORIUwZaSUsWW6EmHouo6djLXBXNpH/view",
     },
   ],
-  "work experience": [
+  "experience": [
     {
       company: "Zuri Team",
       position: "web developer internship",
@@ -147,7 +149,7 @@ export const aboutPage = {
       ],
     },
   ],
-  skills: [
+  "skills": [
     {
       name: "Front-End Development",
       description: `Proficiency with the basics front-end development, grounded with the knowlegde of HTML, CSS, and JavaScript to build user friendly and responsive web applications.`,
@@ -179,7 +181,7 @@ export const aboutPage = {
   ],
 };
 
-export const projects = [
+export const projects:Project[] = [
   {
     url: "https://loopstudios-titanweb.vercel.app/",
     text: "Loopstudios landing page",

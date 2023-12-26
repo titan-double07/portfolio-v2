@@ -1,3 +1,4 @@
+import React from 'react';
 import { Ysabeau } from "next/font/google";
 import "./globals.css";
 import { ReduxProvider } from "./redux/provider";
@@ -13,7 +14,7 @@ export const metadata = {
   description: "Get a glimpse of my skills as a web developer",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body

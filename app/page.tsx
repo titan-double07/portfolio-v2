@@ -1,5 +1,5 @@
 import React from "react";
-import Skills from "./components/Skills";
+import Tools from "./components/Tools";
 import Link from "next/link";
 
 export default function page() {
@@ -11,12 +11,12 @@ export default function page() {
           web developer
         </h4>
         <p>
-          I aim to create visually appealing and responsive websites, I also
-          make sure to implement best practices and SEO to make sure your
-          website is easily discoverable on search engines.
+          As a web developer, my goal is simple: to build visually stunning,
+          easy-to-navigate sites that leave a positive impression and works
+          seamlessly well.
         </p>
       </div>
-      <Skills />
+      <Tools />
       <Link
         href="https://drive.google.com/file/d/1cXMznTFdK8RXDO1FPuRWD67zv0EhPOUf/view?usp=sharing"
         className=" text-lg px-10 py-4 font-bold rounded-lg  mt-16   uppercase  bg-secondary  text-dark hover:border-4 hover:border-tetiary hover:text-tetiary hover:bg-dark active:scale-90 active:border-tetiary/50 xl:hidden ">

@@ -1,11 +1,11 @@
 import React from "react";
-import { skills } from "../data";
+import { tools } from "../data";
 
-export default function Skills() {
+export default function Tools() {
   return (
     <div className="  flex flex-wrap justify-center gap-8 pt-10 lg:w-4/5 ">
-      {skills.map((skill, index) => {
-        const { icon, text } = skill;
+      {tools.map((tool, index) => {
+        const { icon, text } = tool;
 
         return (
           <div key={index} className="flex flex-col items-center ">
