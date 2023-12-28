@@ -1,3 +1,6 @@
+/* *{
+  background-color: rgba(128, 94, 0, 0.192)
+} */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,7 +47,7 @@
   }
   .no-glow {
     box-shadow: none;
-
+color: #EBFFF9;
   }
 }
 

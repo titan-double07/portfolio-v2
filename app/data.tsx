@@ -17,10 +17,10 @@ import {
   SiRedux,
   SiReactquery,
 } from "react-icons/si";
-import { AboutPageData, Links, Project, Tools } from "./types/types";
+import { AboutPageData, Link, Project, Tools } from "./types/types";
 
 
-export const links: Links[] = [
+export const links: Link[] = [
   {
     id: 1,
     url: "/",
@@ -93,10 +93,10 @@ export const tools:Tools[] = [
 
 export const aboutPageData:AboutPageData = {
   "about": {
-    description: `I'm really passionate about creating websites and web apps that people would love to use. As a web developer, my goal is simple: to build visually stunning, easy-to-navigate sites that leave a positive impression and works seamlessly well. I bring together my programming skills and a strong design sense to make mobile-friendly websites that work like a charm✨. By understanding what businesses need and what users want, I turn ideas into beautiful and functional interfaces. I'm all about improving user experience through user-friendly designs, I'm constantly learning and adapting to the latest trends, aiming to make the web experience better, one click at a time😁.`,
+    description: `I'm really passionate about creating websites and apps that people would love to use. As a web developer, my goal is simple: to build visually stunning, easy-to-navigate, and functional sites that leave a positive impression and work seamlessly well. By understanding what businesses need and what users want, I turn ideas into reality through my design and development skills. I'm constantly learning and adapting to the latest trends, aiming to make myself and the apps I build better, one </div> at a time😁.`,
     education: {
+      institution: "Federal University of Technology,Owerri",
       degree: "Bachelor of Technology in Project Management",
-      university: "Federal University of Technology,Owerri",
       date: "2016 - 2023",
     },
   },
@@ -114,7 +114,7 @@ export const aboutPageData:AboutPageData = {
       url: "https://drive.google.com/file/d/16-xyQSFOYpklTrPqKuS2gtKRj47ydLPu/view",
     },
     {
-      name: "Front-End Development - HTML, CSS, and JavaScript",
+      name: "Front-End Development",
       issuer: "Zuri Team",
       date: "2022",
       url: "https://drive.google.com/file/d/16fDORIUwZaSUsWW6EmHouo6djLXBXNpH/view",
@@ -122,11 +122,20 @@ export const aboutPageData:AboutPageData = {
   ],
   "experience": [
     {
+      company: "AtlasMkt",
+      position: "front-end developer ",
+      date: "NOV - DEC, 2023",
+      description: [
+        "Developed and implemented user - facing features for their web applications ",
+        'Ensured proper API integration, making sure it fuctiond properly and as expected',
+        'Further boosted my proficiency with Next.Js as I encountered bugs and resolved those bug by seeking out more knowlege and better understanding next.js'
+      ],
+    },
+    {
       company: "Zuri Team",
       position: "web developer internship",
-      date: "AUG 2022",
+      date: "AUG, 2022",
       description: [
-        "Reported back to the instructor to receive day - to - day tasks and responsibilities.",
         "Developed user - facing features and implemented interactive functionalities for web applications using HTML, CSS, and JavaScript.",
         "Gained knowledge in interactive and responsive web development",
         "Worked on various projects using Html, CSS, and JavaScript.",
@@ -135,19 +144,13 @@ export const aboutPageData:AboutPageData = {
     {
       company: "Seplat Energy",
       position: "public relations officer",
-      date: "AUG 2019",
+      date: "AUG, 2019",
       description: [
         "Worked with the community relations department of seplat petroleum development company now seplat energy at the 2019 Seplat energy community development program for ohaji egbema in Owerri imo state",
+        'Gained better knowledge and experience in communication and dealing with people',
       ],
     },
-    {
-      company: "AtlasMkt.io",
-      position: "front-end developer ",
-      date: "NOV 2023 - DEC 2023",
-      description: [
-        "While contracte dto Atlas i was in charge of developing some of the feature of the web application, such as the category, order, wallet pages etc.",
-      ],
-    },
+   
   ],
   "skills": [
     {

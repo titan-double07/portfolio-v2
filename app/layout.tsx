@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <ReduxProvider>
           <div className="lg:flex  lg:flex-row-reverse lg:justify-center lg:items-center lg:h-screen lg:gap-12  ">
-            <div className="hidden lg:block lg:self-start lg:pt-20 ">
+            <div className="hidden lg:block  ">
               <LgNavBar />
             </div>
 

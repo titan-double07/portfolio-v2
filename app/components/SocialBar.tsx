@@ -4,7 +4,7 @@ import { FaGithubSquare, FaLinkedin, FaPhoneSquare } from "react-icons/fa";
 import { BsEnvelopeAtFill } from "react-icons/bs";
 export default function SocialBar() {
   return (
-    <div className="social-bar  flex items-center justify-center gap-10 sm:gap-32 pt-5 xl:pt-0 sm:pt-16 capitalize xl:flex-col xl:gap-5   ">
+    <div className="social-bar  flex items-center justify-center gap-10 sm:gap-20 pt-5 xl:pt-0 sm:pt-8 capitalize xl:flex-col xl:gap-5   ">
       <a
         href="tel:+2347014385856"
         className="hover:text-tetiary xl:hover:text-light xl:w-full xl:justify-start flex flex-col xl:flex-row xl:gap-4 justify-center items-center">

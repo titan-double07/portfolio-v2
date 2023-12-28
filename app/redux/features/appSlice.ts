@@ -21,7 +21,7 @@ export const appSlice = createSlice({
         },
          // Use the PayloadAction type to declare the contents of `action.payload`
         setCurrentTab: (state, action: PayloadAction<string>) => {
-            console.log(action.payload)
+            
             state.currentTab = action.payload
         }
     }

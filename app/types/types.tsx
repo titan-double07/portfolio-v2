@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 type Icon = ReactElement
 
 // Define types for links array
-export type Links = {
+export type Link = {
     id: number;
     url: string;
     text: string;
@@ -19,41 +19,43 @@ export type Tools = {
 };
 
 //define types  for the aboutPageData
-// Define types for education
-type Education = {
+export type Education = {
+    institution: string;
     degree: string;
-    university: string;
     date: string;
 };
+export type About = {
+    description: string;
+    education: Education;
+}
+// Define types for education
 // Define types for certifications
-type Certification = {
+export type Certification = {
     name: string;
     issuer: string;
     date: string;
     url: string;
 };
+// export type CertificationsArray = Certification[] 
 // Define types for experience
-type Experience = {
+export type Experience = {
     company: string;
     position: string;
     date: string;
     description: string[];
 };
 //define types for skills in aboutPageData
-type Skill = {
+export type Skill = {
     name: string;
     description: string;
 };
 
 export type AboutPageData = {
-    about: {
-        description: string;
-        education: Education;
-    };
+    about: About;
     certifications: Certification[];
     experience: Experience[];
     skills: Skill[];
-    
+
 }
 
 //define types for projects array
