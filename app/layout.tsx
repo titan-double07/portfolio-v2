@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${ysabeau.className}  bg-dark h-screen text-light relative  `}>
+        className={`${ysabeau.className}  bg-dark h-screen text-light relative leading-relaxed tracking-wide  `}>
         <div className=" layout-bg-img absolute inset-0 -z-10">
           <Image
             src="/images/background.webp"
@@ -41,11 +41,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Profile />
               </div>
 
-              <div className="layout-container xl:w-full lg:bg-dark lg:rounded-3xl xl:rounded-none xl:rounded-r-[40px]  xl:h-full  lg:h-[90%] overflow-auto lg:glow xl:no-glow lg:max-h-[700px]  ">
+              <div className="layout-container w-full lg:bg-dark lg:rounded-3xl xl:rounded-none xl:rounded-r-[40px]  xl:h-full  lg:h-[90%] overflow-auto lg:glow xl:no-glow lg:max-h-[700px]  ">
                 <div className="xl:hidden">
                   <SocialBar />
                 </div>
-                <main className="overflow-auto mb-20 lg:mb-10 xl:mb-0 xl:h-full ">
+                <main className="overflow-auto  mb-20 lg:mb-10 xl:mb-0 xl:h-full ">
                   {children}
                 </main>
               </div>

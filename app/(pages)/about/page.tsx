@@ -10,12 +10,12 @@ import { useEffect } from "react"
 import { AboutPageData } from "@/app/types/types"
 
 export default function About() {
-  const{about,certifications,experience,skills}:AboutPageData=aboutPageData
+  const { about, certifications, experience, skills }: AboutPageData = aboutPageData
   const { currentTab } = useAppSelector(state => state.appReducer)
- 
+
   return (
-    <div className="container pt-6 sm:pt-12 relative flex flex-col gap-8 sm:gap-12 text-center h-full">
-      <Tabs/>
+    <div className="container pt-6 sm:pt-10 relative flex flex-col gap-8 sm:gap-10 text-center h-full  ">
+      <Tabs />
       <div className="flex justify-center ">
         {
           (() => {
@@ -24,19 +24,19 @@ export default function About() {
                 return <AboutMe {...about} />;
               case "certifications":
                 return <Certification certifications=
-                {certifications} />;
+                  {certifications} />;
               case "experience":
                 return <WorkExperience experience={experience} />;
               case "skills":
-                return <SkillsSection  skills={skills} />;
+                return <SkillsSection skills={skills} />;
               default:
                 return <AboutMe {...about} />;
             }
           })()
-      }
-     </div>
-     
-     
+        }
+      </div>
+
+
     </div>
   )
 }

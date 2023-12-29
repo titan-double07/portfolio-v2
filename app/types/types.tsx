@@ -64,7 +64,8 @@ export type AboutPageData = {
 // Define types for projects
 export type Project = {
     url: string;
-    text: string;
+    gitUrl?: string;
+    title: string;
     image: string;
     description: string;
     tools: Tools[];

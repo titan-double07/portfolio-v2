@@ -11,17 +11,10 @@
   }
 
   h2 {
-    @apply text-[2.263rem] sm:text-[2.51rem];
-  }
-
-  h3 {
-    @apply text-[1.967rem] sm:text-[2.19rem];
-  }
-  h4 {
     @apply text-[1.711rem] sm:text-[1.9rem];
   }
 
-  h5 {
+  h3 {
     @apply text-[1.487rem] sm:text-[1.66rem];
   }
 
@@ -36,7 +29,7 @@
 
 @layer components {
   .container {
-    @apply mx-auto px-8 sm:px-24;
+    @apply mx-auto px-8 sm:px-12;
   }
   .glow {
     box-shadow: 0px 0px 15px 3px rgba(57, 255, 192, 0.836);

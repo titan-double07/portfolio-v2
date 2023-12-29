@@ -14,8 +14,8 @@ export default function Profile() {
       />
       <div className="profile-text flex flex-col items-center gap-5 ">
         <div className="text-center capitalize">
-          <h5 className="name">Chisom Okereke</h5>
-          <h5 className="title">web developer</h5>
+          <h3 className="name">Chisom Okereke</h3>
+          <h3 className="title">web developer</h3>
         </div>
         <div className=" ">
           <SocialBar />

@@ -155,23 +155,23 @@ export const aboutPageData:AboutPageData = {
   "skills": [
     {
       name: "Front-End Development",
-      description: `Proficiency with the basics front-end development, grounded with the knowlegde of HTML, CSS, and JavaScript to build user friendly and responsive web applications.`,
+      description: `Proficiency with the basics of front-end development, grounded with the knowlegde of HTML, CSS, and javaScript to build user-friendly and responsive web applications.`,
     },
     {
       name: "Web Design",
-      description: `with tools such as FIGMA and PHOTOSHOP and the knowledge of design principles and user - centered design techniques to create visually appealing and intuitive interfaces.`,
+      description: `With tools such as figma and photoshop and the knowledge of design principles and user-centered design techniques to create visually appealing and intuitive interfaces.`,
     },
     {
       name: "CSS Framwork",
-      description: `Taking my CSS skills to the next level, i acqured the knowledge of CSS frameworks such as BOOTSTRAP and TAILWIND CSS, that helped me boost my production time.`,
+      description: `Taking my CSS skills to the next level, I acqured the knowledge of CSS frameworks such as bootstrap and tailwind CSS, that helped me boost my production time.`,
     },
     {
       name: "JavaScript Framework/Library",
-      description: `Another boost to my skill set, i also acquired the knowledge of JavaScript framework libraries such as REACT.JS, and NEXT.JS that helped me to build more dynamic web applications more efficiently and quickly.`,
+      description: `Another boost to my skill set, i also acquired the knowledge of JavaScript framework/libraries such as react.js, and next.js that helped me to build more dynamic web applications more efficiently and quickly.`,
     },
     {
       name: "Animation with Framer Motion",
-      description: `with the incorporation of FRAMER MOTION with REACT, i can breathe life into any web application, with intuitive and captivating animations.`,
+      description: `With the incorporation of framer motion with react.js, i can breathe life into any web application, with intuitive and captivating animations.`,
     },
     {
       name: "Version Control",
@@ -179,7 +179,7 @@ export const aboutPageData:AboutPageData = {
     },
     {
       name: "API Integration and Database Management",
-      description: `strong experience with in integrating RESTful APIs to fetch and display data from databases (MONGODB, MYSQL,) in web applications.`,
+      description: `strong experience with in integrating RESTful APIs to fetch and display data from databases (mongoDB, MYSQL,) in web applications.`,
     },
   ],
 };
@@ -187,10 +187,12 @@ export const aboutPageData:AboutPageData = {
 export const projects:Project[] = [
   {
     url: "https://loopstudios-titanweb.vercel.app/",
-    text: "Loopstudios landing page",
+    gitUrl: "https://github.com/titanwarlord007/loopstudios-landing-page",
+    title: "Loopstudios landing page",
     image: "/images/loopstudios-desktop-min.png",
     description:
-      "Loop Studios is a captivating responsive webpage created using Next.js, TailwindCSS, Redux, and Framer Motion. With Next.js, it offers excellent performance and responsiveness. TailwindCSS ensures a polished design across devices. Redux enables seamless data flow, while Framer Motion adds engaging animations. Experience a modern and immersive web journey with Loop Studios.",
+      "LoopStudios' landing page is built using Next.js and Tailwind CSS. The Unsplash API has been used to provide beautiful images, and the Framer Motion animation has brought the app to life. The result is a simple yet interesting design that is reminiscent of the biblical story of God breathing life into man.",
+    
     tools: [
       {
         text: "Next.js",
@@ -212,10 +214,11 @@ export const projects:Project[] = [
   },
   {
     url: "https://multi-stage-form-beta.vercel.app/",
-    text: "Multi-stage SignUp Form",
+    gitUrl: "https://github.com/titanwarlord007/multi-stage-form",
+    title: "Multi-stage SignUp Form",
     image: "/images/multi-stage-signUp-form.png",
     description:
-      "A smooth responsive multi-stage signUp form, enabled with basic form validation and efficient data collection and tracking with the help of the react-hook-form library, the web app was built using Next.js, with TailwindCSS and FramerMotion to give it mordern UI/UX and smooth animated transitions",
+      "The web app features a smooth and responsive multi-stage sign-up form, which is equipped with basic form validation and efficient data collection and tracking capabilities curtsey of React Hook Form library. The app was developed using Next.js and incorporates TailwindCSS for a modern and user-friendly UI/UX design. Additionally, Framer Motion was used to create intuitive and interactive animated transitions throughout the app.",
     tools: [
       {
         text: "Next.js",
@@ -233,10 +236,11 @@ export const projects:Project[] = [
   },
   {
     url: "https://rock-paper-scissors-app-seven.vercel.app/",
-    text: "Rock-Paper-Scissors App",
+    gitUrl: "https://github.com/titanwarlord007/rock-paper-scissors-app",
+    title: "Rock-Paper-Scissors App",
     image: "/images/rock-paper-scissors-app.png",
     description:
-      "The Rock Paper Scissors app is a fun and interactive responsive web application created using React, TailwindCSS, and Redux. It offers an immersive gaming experience with smooth user interactions. The stylish design, powered by TailwindCSS, ensures a visually appealing interface. Redux enables efficient state management, enhancing the game logic and providing a seamless user experience. Enjoy playing Rock Paper Scissors in a modern and engaging way with this app ",
+      "Here is a rock-paper-scissors game that you can enjoy during your free time. It provides an engaging gaming experience with seamless user interactions and a stylish design, thanks to FrontendMentor. The game logic is enhanced by the use of Redux for efficient state management, resulting in a smooth user experience. Other tools that were utilized in the development process include React.js and Tailwind. ",
     tools: [
       {
         text: "React",
@@ -254,10 +258,11 @@ export const projects:Project[] = [
   },
   {
     url: "https://traders-app-teal.vercel.app/",
-    text: "Stock Watchlist App",
+    gitUrl: "https://github.com/titanwarlord007/traders-app",
+    title: "Stock Watchlist App",
     image: "/images/traders-app.png",
     description:
-      "The Traders app is a web application developed with React, CSS, and React Query. It offers a convenient stock watchlist feature, allowing users to track their favorite stocks and stay updated on their performance. With a user-friendly interface and efficient data management, the Traders app provides an enjoyable trading experience. Stay informed and organized with this powerful stock watchlist application.",
+      "A simple lightweight app for watching and tracking your favourite stock and staying updated on its performance. developed with React, CSS, and React Query,  using  useContext hook to efficiently manage and access shared data as well as custom hooks to encapsulate reusable logic, promoting code reusability.",
     tools: [
       {
         text: "React",
@@ -276,7 +281,8 @@ export const projects:Project[] = [
   },
   {
     url: "https://chisomwebdev.vercel.app/",
-    text: "Old Portfolio Website",
+    gitUrl: "https://github.com/titanwarlord007/portfolio",
+    title: "Old Portfolio Website",
     image: "/images/portfolio-img.png",
     description: `ChisomWebDev's portfolio website is a personalized showcase of my web development journey. Powered by CSS and React, it presents a visually appealing and interactive platform to explore my skills and projects. With a clean and modern design, the website offers seamless navigation and highlights the essence of my work. Dive into my portfolio, witness my expertise firsthand, and discover the passion I bring to each project. Experience the artistry and innovation of ChisomWebDev's portfolio website in a concise and engaging format.`,
     tools: [
@@ -292,7 +298,8 @@ export const projects:Project[] = [
   },
   {
     url: "https://ecommerce-product-page-nine-mauve.vercel.app/",
-    text: "Ecommerce product page",
+    gitUrl: "https://github.com/titanwarlord007/ecommerce-product-page",
+    title: "Ecommerce product page",
     image: "/images/ecommerce-product-page.png",
     description:
       "An ecommerce product page challenge from frontendmentor.io; showcasing my proficiency with react hooks such as useState, useReducer, useContext etc",
@@ -309,7 +316,8 @@ export const projects:Project[] = [
   },
   {
     url: "https://simple-shopping-cart-two.vercel.app/",
-    text: "Simple Shopping Cart",
+    gitUrl: "https://github.com/titanwarlord007/simple-shopping-cart",
+    title: "Simple Shopping Cart",
     image: "/images/simple-shopping-cart.png",
     description: "A Simple Shopping Cart made with redux",
     tools: [
@@ -325,7 +333,8 @@ export const projects:Project[] = [
   },
   {
     url: "https://titanwarlord007.github.io/Make-A-Wish-copy/",
-    text: "Make A Wish website",
+    gitUrl: "https://github.com/titanwarlord007/Make-A-Wish-copy",
+    title: "Make A Wish website",
     image: "/images/Make-A-Wish-copy_img.webp",
     description: "A copy of the Make A Wish foundation landing page",
     tools: [
@@ -345,7 +354,8 @@ export const projects:Project[] = [
   },
   {
     url: "https://titanwarlord007.github.io/bootstrap-website/",
-    text: "Bootstrap Website",
+    gitUrl: "https://github.com/titanwarlord007/bootstrap-website",
+    title: "Bootstrap Website",
     image: "/images/bootstrap-website_img.png",
     description: "A mock bootstrap landing page",
     tools: [
