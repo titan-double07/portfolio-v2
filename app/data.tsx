@@ -47,7 +47,7 @@ export const links: Link[] = [
   },
 ];
 
-export const tools:Tools[] = [
+export const tools: Tools[] = [
   {
     text: "Next.js",
     icon: <SiNextdotjs className="icon " />,
@@ -91,9 +91,14 @@ export const tools:Tools[] = [
   },
 ];
 
-export const aboutPageData:AboutPageData = {
+export const aboutPageData: AboutPageData = {
   "about": {
-    description: `I'm really passionate about creating websites and apps that people would love to use. As a web developer, my goal is simple: to build visually stunning, easy-to-navigate, and functional sites that leave a positive impression and work seamlessly well. By understanding what businesses need and what users want, I turn ideas into reality through my design and development skills. I'm constantly learning and adapting to the latest trends, aiming to make myself and the apps I build better, one </div> at a time😁.`,
+    description: [`I began my journey into the world of web development in 2021, but it wasn't until 2022 that I decided to take it seriously and fully commit myself to it. Despite the challenges I faced along the way, I found myself falling in love with the process.`,
+
+      `At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I refused to give up. I persisted and continued to push forward, one step at a time 💪, until I realized how much I had grown. Looking back, I'm proud of the progress I have made and how far I have come 😌.,`,
+      `During my leisure time, I enjoy swimming 🏊‍♂️, reading(manga😅), listening to music and audiobooks, watching movies, drawing, and playing games and of course coding 👨‍💻. Although I've had to reduce the amount of time I spend on these activities, I accept it as a small sacrifice to achieve my goal of becoming a developer.`,
+
+      `My ultimate goal is to use my web development skills to help others by solving problems and making their lives easier. I am aware that this will require hard work, dedication, and a willingness to learn, but I'm excited about the possibilities that lie ahead 💯😁.`],
     education: {
       institution: "Federal University of Technology,Owerri",
       degree: "Bachelor of Technology in Project Management",
@@ -150,7 +155,7 @@ export const aboutPageData:AboutPageData = {
         'Gained better knowledge and experience in communication and dealing with people',
       ],
     },
-   
+
   ],
   "skills": [
     {
@@ -184,7 +189,7 @@ export const aboutPageData:AboutPageData = {
   ],
 };
 
-export const projects:Project[] = [
+export const projects: Project[] = [
   {
     url: "https://loopstudios-titanweb.vercel.app/",
     gitUrl: "https://github.com/titanwarlord007/loopstudios-landing-page",
@@ -192,7 +197,7 @@ export const projects:Project[] = [
     image: "/images/loopstudios-desktop-min.png",
     description:
       "LoopStudios' landing page is built using Next.js and Tailwind CSS. The Unsplash API has been used to provide beautiful images, and the Framer Motion animation has brought the app to life. The result is a simple yet interesting design that is reminiscent of the biblical story of God breathing life into man.",
-    
+
     tools: [
       {
         text: "Next.js",
@@ -284,7 +289,7 @@ export const projects:Project[] = [
     gitUrl: "https://github.com/titanwarlord007/portfolio",
     title: "Old Portfolio Website",
     image: "/images/portfolio-img.png",
-    description: `ChisomWebDev's portfolio website is a personalized showcase of my web development journey. Powered by CSS and React, it presents a visually appealing and interactive platform to explore my skills and projects. With a clean and modern design, the website offers seamless navigation and highlights the essence of my work. Dive into my portfolio, witness my expertise firsthand, and discover the passion I bring to each project. Experience the artistry and innovation of ChisomWebDev's portfolio website in a concise and engaging format.`,
+    description: `This is an older version of my portfolio website. It features a responsive design and an attractive UI, which highlights my progress as a developer. I also meticulously organized the database so that it could be used to populate different pages and make editing more convenient. The website was built using CSS and React.`,
     tools: [
       {
         text: "React",
@@ -302,7 +307,7 @@ export const projects:Project[] = [
     title: "Ecommerce product page",
     image: "/images/ecommerce-product-page.png",
     description:
-      "An ecommerce product page challenge from frontendmentor.io; showcasing my proficiency with react hooks such as useState, useReducer, useContext etc",
+      "An e-commerce product page challenge from frontendmentor.io showcasing my proficiency with React hooks such as useState, useReducer, useContext, etc. This will help me better understand React.",
     tools: [
       {
         text: "React",
@@ -319,11 +324,15 @@ export const projects:Project[] = [
     gitUrl: "https://github.com/titanwarlord007/simple-shopping-cart",
     title: "Simple Shopping Cart",
     image: "/images/simple-shopping-cart.png",
-    description: "A Simple Shopping Cart made with redux",
+    description: "A Simple Shopping Cart made with redux, used to learn and  practice how redux works ,built with react and tailwind",
     tools: [
       {
         text: "React",
         icon: <FaReact className="text-[#58c5ee] " />,
+      },
+      {
+        text: "CSS",
+        icon: <FaCss3Alt className="text-[#58c5ee]" />,
       },
       {
         text: "Redux",
@@ -357,7 +366,7 @@ export const projects:Project[] = [
     gitUrl: "https://github.com/titanwarlord007/bootstrap-website",
     title: "Bootstrap Website",
     image: "/images/bootstrap-website_img.png",
-    description: "A mock bootstrap landing page",
+    description: "A mock bootstrap landing page, ",
     tools: [
       {
         text: "HTML",

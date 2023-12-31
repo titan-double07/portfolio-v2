@@ -1,7 +1,11 @@
+
 import React from 'react'
+import ProjectsContainer from './components/ProjectsContainer'
 
 export default function Projects() {
   return (
-    <div className='container pt-6 sm:pt-10'>Projects</div>
+    <div className='container py-6 sm:py-10'>
+    <ProjectsContainer/>
+    </div>
   )
 }

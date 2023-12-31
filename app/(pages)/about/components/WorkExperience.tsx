@@ -4,7 +4,7 @@ import React from 'react'
 export default function WorkExperience({ experience }: { experience: Experience[] }) {
   
   return (
-    <section id="experience" className="flex flex-col justify-center items-center gap-6 pb-10  ">
+    <section id="experience" className="flex flex-col justify-center items-center gap-6  ">
       {
         experience.map((experience, index) => {
           const { company, position, date, description } = experience

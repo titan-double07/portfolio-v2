@@ -25,7 +25,7 @@ export type Education = {
     date: string;
 };
 export type About = {
-    description: string;
+    description: string[];
     education: Education;
 }
 // Define types for education

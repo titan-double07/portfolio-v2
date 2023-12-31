@@ -14,9 +14,10 @@ export default function About() {
   const { currentTab } = useAppSelector(state => state.appReducer)
 
   return (
-    <div className="container pt-6 sm:pt-10 relative flex flex-col gap-8 sm:gap-10 text-center h-full  ">
+    <div className="container py-6 sm:py-10  relative flex flex-col gap-8 sm:gap-10 text-center  ">
       <Tabs />
       <div className="flex justify-center ">
+
         {
           (() => {
             switch (currentTab) {
@@ -34,6 +35,8 @@ export default function About() {
             }
           })()
         }
+
+
       </div>
 
 
