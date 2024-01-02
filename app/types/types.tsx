@@ -34,7 +34,7 @@ export type Certification = {
     name: string;
     issuer: string;
     date: string;
-    url: string;
+    url?: string;
 };
 // export type CertificationsArray = Certification[] 
 // Define types for experience

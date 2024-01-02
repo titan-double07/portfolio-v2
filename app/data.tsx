@@ -92,20 +92,27 @@ export const tools: Tools[] = [
 ];
 
 export const aboutPageData: AboutPageData = {
-  "about": {
-    description: [`I began my journey into the world of web development in 2021, but it wasn't until 2022 that I decided to take it seriously and fully commit myself to it. Despite the challenges I faced along the way, I found myself falling in love with the process.`,
+  about: {
+    description: [
+      `I began my journey into the world of web development in 2021, but it wasn't until 2022 that I decided to take it seriously and fully commit myself to it. Despite the challenges I faced along the way, I found myself falling in love with the process.`,
 
       `At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I refused to give up. I persisted and continued to push forward, one step at a time 💪, until I realized how much I had grown. Looking back, I'm proud of the progress I have made and how far I have come 😌.,`,
       `During my leisure time, I enjoy swimming 🏊‍♂️, reading(manga😅), listening to music and audiobooks, watching movies, drawing, and playing games and of course coding 👨‍💻. Although I've had to reduce the amount of time I spend on these activities, I accept it as a small sacrifice to achieve my goal of becoming a developer.`,
 
-      `My ultimate goal is to use my web development skills to help others by solving problems and making their lives easier. I am aware that this will require hard work, dedication, and a willingness to learn, but I'm excited about the possibilities that lie ahead 💯😁.`],
+      `My ultimate goal is to use my web development skills to help others by solving problems and making their lives easier. I am aware that this will require hard work, dedication, and a willingness to learn, but I'm excited about the possibilities that lie ahead 💯😁.`,
+    ],
     education: {
       institution: "Federal University of Technology,Owerri",
       degree: "Bachelor of Technology in Project Management",
       date: "2016 - 2023",
     },
   },
-  "certifications": [
+  certifications: [
+    {
+      name: "Bachelor of Technology in Project Management",
+      issuer: "Federal University of Technology,Owerri",
+      date: "2023",
+    },
     {
       name: "Javascript Algorithms and Data Structures",
       issuer: "freeCodeCamp",
@@ -125,15 +132,15 @@ export const aboutPageData: AboutPageData = {
       url: "https://drive.google.com/file/d/16fDORIUwZaSUsWW6EmHouo6djLXBXNpH/view",
     },
   ],
-  "experience": [
+  experience: [
     {
       company: "AtlasMkt",
       position: "front-end developer ",
       date: "NOV - DEC, 2023",
       description: [
         "Developed and implemented user - facing features for their web applications ",
-        'Ensured proper API integration, making sure it fuctiond properly and as expected',
-        'Further boosted my proficiency with Next.Js as I encountered bugs and resolved those bug by seeking out more knowlege and better understanding next.js'
+        "Ensured proper API integration, making sure it fuctiond properly and as expected",
+        "Further boosted my proficiency with Next.Js as I encountered bugs and resolved those bug by seeking out more knowlege and better understanding next.js",
       ],
     },
     {
@@ -152,12 +159,11 @@ export const aboutPageData: AboutPageData = {
       date: "AUG, 2019",
       description: [
         "Worked with the community relations department of seplat petroleum development company now seplat energy at the 2019 Seplat energy community development program for ohaji egbema in Owerri imo state",
-        'Gained better knowledge and experience in communication and dealing with people',
+        "Gained better knowledge and experience in communication and dealing with people",
       ],
     },
-
   ],
-  "skills": [
+  skills: [
     {
       name: "Front-End Development",
       description: `Proficiency with the basics of front-end development, grounded with the knowlegde of HTML, CSS, and javaScript to build user-friendly and responsive web applications.`,
