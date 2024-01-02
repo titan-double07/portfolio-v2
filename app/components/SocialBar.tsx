@@ -12,7 +12,7 @@ export default function SocialBar() {
         <p className="text-sm sm:text-lg "> phone no</p>
       </a>
       <a
-        href="mailto:"
+        href="mailto:chisomwebdev@outlook.com"
         className="hover:text-tetiary xl:hover:text-light xl:w-full xl:justify-start flex flex-col xl:flex-row xl:gap-4 justify-center items-center">
         <BsEnvelopeAtFill className="text-2xl sm:text-3xl xl:text-2xl" />
         <p className="text-sm sm:text-lg ">email</p>

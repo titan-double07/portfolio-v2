@@ -71,3 +71,7 @@ export type Project = {
     tools: Tools[];
 };
 
+export type Contact = {
+    
+}
+
