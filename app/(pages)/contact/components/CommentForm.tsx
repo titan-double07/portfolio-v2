@@ -7,27 +7,33 @@ import { FaSpinner } from "react-icons/fa";
 export default function CommentForm() {
   const ref = useRef<HTMLFormElement>(null);
   const [toast, setToast] = useState<string | null>(null);
-useEffect(() => {
-   let timer: NodeJS.Timeout;
-  if (toast) {
-    timer = setTimeout(() => {
-      setToast(null);
-    }, 3000);
-  }
-
-  return () => {
-    clearTimeout(timer);
+  const [comment, setComment] = useState("");
+  const maxLength = 200;
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setComment(event.currentTarget.value);
   };
-}, [toast]);
+//  const remainingCharacters = maxLength - comment.length;
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (toast) {
+      timer = setTimeout(() => {
+        setToast(null);
+      }, 3000);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [toast]);
   return (
     <form
       ref={ref}
       action={async (formData: FormData) => {
         try {
-          const res=await createComment(formData);
-            if (res.success) {
-              setToast(res.message);
-            }
+          const res = await createComment(formData);
+          if (res.success) {
+            setToast(res.message);
+          }
           ref.current?.reset();
         } catch (error) {}
       }}
@@ -38,7 +44,7 @@ useEffect(() => {
             type="text"
             name="name"
             id="name"
-            className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
+            className="block py-2.5 px-0 w-full text-base  bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
             placeholder=" "
             required
           />
@@ -54,7 +60,7 @@ useEffect(() => {
             name="email"
             id="email"
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
-            className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
+            className="block py-2.5 px-0 w-full text-base  bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
             placeholder=" "
             required
           />
@@ -69,19 +75,30 @@ useEffect(() => {
         <textarea
           name="comment"
           id="comment"
-          className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
+          className="block py-2.5 px-0 w-full text-base  bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
           cols={30}
-          rows={2}
+          rows={3}
           required
-          placeholder=""></textarea>
+          maxLength={maxLength}
+          onChange={handleChange}>
+          {" "}
+          
+        </textarea>
         <label
           htmlFor="message"
           className="peer-focus:font-medium absolute text-sm text-light duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-tetiary  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-6">
           Comment...
         </label>
+        <div className="text-sm text-tetiary/80">
+          {maxLength - comment.length} characters left (maximum {maxLength}{" "}
+          characters)
+        </div>
+        {/* <div>
+          {remainingCharacters} characters left (maximum {maxLength} characters)
+        </div> */}
       </div>
       <SubmitButton />
-      {toast && <p className="text-tetiary/80 text-sm">{toast}</p>}
+      {toast && <p className="text-tetiary/80 text-sm -mt-4">{toast}</p>}
     </form>
   );
 }

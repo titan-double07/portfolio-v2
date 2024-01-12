@@ -10,7 +10,7 @@ export async function createComment(formData: FormData) {
     const commentData = {
       name,
       email,
-      comment: comment.toString(),
+      comment,
     };
 
     const newComment = await Comment.create(commentData);
@@ -31,7 +31,7 @@ export async function getComments() {
       const { _id: id, name, email, comment,createdAt } = ticket;
       // console.log(ticket);
       return {
-        id,
+        id: id.toString(),
         name,
         email,
         comment,
@@ -41,8 +41,26 @@ export async function getComments() {
         ),//check the distance between two dates, current date and created date
       };
     });
-    return ticketData;
+    return ticketData.reverse();
   } catch (error) {
+    throw new Error(`something went wrong, ${error}`);
+  }
+}
+
+export async function deleteComment(id: string, formData: FormData) {
+  const password=formData.get('password') as string
+  try {
+    console.log(id, password)
+    if(password === process.env.DELETE_PASSWORD){
+      console.log("password is correct",)
+      await Comment.findByIdAndDelete(id)
+      revalidatePath("/contact");
+    } else {
+      console.log("password is incorrect")
+    }
+    
+
+  } catch(error) {
     throw new Error(`something went wrong, ${error}`);
   }
 }

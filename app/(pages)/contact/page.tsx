@@ -3,13 +3,14 @@ import { FaEnvelope, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import CommentForm from "./components/CommentForm";
 import Comments from "./components/Comments";
 import { getComments } from "./commentActions";
+import CommentsModal from "./components/CommentsModal";
 
 export default async function Contact() {
   const comments = await getComments();
-  // const commentId = comments[0]?._id;
-  console.log(comments);
+
   return (
     <div className="container py-6 sm:py-10 flex flex-col gap-8 ">
+   
       <section className="contact-section  flex flex-col items-center justify-center gap-2 text-center">
         <p className="">
           {" "}

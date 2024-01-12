@@ -7,7 +7,7 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <div className="nav-bar fixed  inset-x-0 bottom-0 w-full bg-dark border-t-2 border-secondary glow sm:no-glow sm:w-4/5 sm:mx-auto sm:rounded-full sm:mb-10 sm:shadow-lg sm:shadow-tetiary/50 ">
+    <div className="nav-bar fixed  inset-x-0 bottom-0 w-full bg-dark border-t-2 border-secondary glow sm:no-glow sm:w-4/5 sm:mx-auto sm:rounded-full sm:mb-10 sm:shadow-lg sm:shadow-tetiary/50 z-50 ">
       <div className="links-container flex  items-center ">
         {links.map((link) => {
           const { id, url, text, icon } = link;
