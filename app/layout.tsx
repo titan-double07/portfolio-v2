@@ -7,6 +7,7 @@ import SocialBar from "./components/SocialBar";
 import LgNavBar from "./components/LgNavBar";
 import Image from "next/image";
 import Profile from "./components/Profile";
+import SplashScreen from './components/SplashScreen';
 const ysabeau = Ysabeau({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         suppressHydrationWarning
         className={`${ysabeau.className}  bg-dark h-screen text-light relative leading-relaxed tracking-wide  `}>
+        <SplashScreen>
         <div className=" layout-bg-img absolute inset-0 -z-10">
           <Image
             src="/images/background.webp"
@@ -56,6 +58,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </ReduxProvider>
+
+        </SplashScreen>
       </body>
     </html>
   );

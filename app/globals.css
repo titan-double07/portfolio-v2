@@ -42,6 +42,14 @@
     box-shadow: none;
 color: #EBFFF9;
   }
+  .item {
+  /* width: 56%; */
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  /* stroke-linejoin: round;
+  stroke-linecap: round; */
+}
 }
 
 @media screen and (min-width: 1024px) {

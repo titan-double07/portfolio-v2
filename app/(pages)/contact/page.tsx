@@ -1,8 +1,14 @@
 import React from "react";
 import { FaEnvelope, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import CommentForm from "./components/CommentForm";
+import Comments from "./components/Comments";
+import { getComments } from "./commentActions";
 
-export default function Contact() {
+
+export default async function Contact() {
+  const comments = await getComments();
+  // const commentId = comments[0]?._id;
+  console.log(comments);
   return (
     <div className="container py-6 sm:py-10 ">
       <section className="contact-section flex flex-col items-center justify-center gap-2 text-center">
@@ -45,7 +51,7 @@ export default function Contact() {
       <section className="comment-section text-center flex flex-col items-center justify-center gap-2 ">
         <p className=""> {`You're also free to leave a comment as well`}</p>
         <CommentForm />
-
+        <Comments comments={comments} />
       </section>
     </div>
   );
