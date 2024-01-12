@@ -1,17 +1,35 @@
-'use client'
-import React, { useRef } from 'react'
-import { createComment } from '../commentActions';
-
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import { createComment } from "../commentActions";
+import { useFormStatus } from "react-dom";
+import { FaSpinner } from "react-icons/fa";
 
 export default function CommentForm() {
   const ref = useRef<HTMLFormElement>(null);
+  const [toast, setToast] = useState<string | null>(null);
+useEffect(() => {
+   let timer: NodeJS.Timeout;
+  if (toast) {
+    timer = setTimeout(() => {
+      setToast(null);
+    }, 3000);
+  }
 
+  return () => {
+    clearTimeout(timer);
+  };
+}, [toast]);
   return (
     <form
       ref={ref}
-      action={async (formData:FormData) => {
-        await createComment(formData);
-        ref.current?.reset();
+      action={async (formData: FormData) => {
+        try {
+          const res=await createComment(formData);
+            if (res.success) {
+              setToast(res.message);
+            }
+          ref.current?.reset();
+        } catch (error) {}
       }}
       className="max-w-md mx-auto flex flex-col gap-6 w-full">
       <div className="flex flex-col lg:flex-row items-center gap-6 relative">
@@ -35,6 +53,7 @@ export default function CommentForm() {
             type="email"
             name="email"
             id="email"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
             className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
             placeholder=" "
             required
@@ -53,6 +72,7 @@ export default function CommentForm() {
           className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
           cols={30}
           rows={2}
+          required
           placeholder=""></textarea>
         <label
           htmlFor="message"
@@ -60,12 +80,25 @@ export default function CommentForm() {
           Comment...
         </label>
       </div>
-
-      <button
-        type="submit"
-        className="text-dark bg-secondary hover:bg-blue-800 focus:outline-none  font-medium rounded-lg text-lg w-full sm:w-auto px-5 py-2.5 text-center">
-        Submit
-      </button>
+      <SubmitButton />
+      {toast && <p className="text-tetiary/80 text-sm">{toast}</p>}
     </form>
+  );
+}
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    // <button disabled={pending}>
+    //   {pending ? "Creating article..." : "Create Article"}
+    // </button>
+    <button
+      disabled={pending}
+      type="submit"
+      className="text-dark bg-secondary hover:border hover:border-tetiary hover:text-tetiary hover:bg-dark active:scale-90 active:border-tetiary/50  font-medium rounded-lg text-lg w-full sm:w-auto px-5 py-2.5 text-center flex items-center justify-center">
+      {pending ? "Submiting..." : "Submit"}
+      {pending && <FaSpinner className="ml-2 animate-spin" />}
+    </button>
   );
 }

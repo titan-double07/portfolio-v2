@@ -12,7 +12,7 @@ type CommentsProp = {
 export default function Comments({ comments }: CommentsProp) {
   return (
     <div className="flex flex-col justify-center items-center w-full gap-5">
-      {comments.map(({ id, name, email, comment,created_at }, index) => {
+      {comments.map(({ id, name, email, comment, created_at }, index) => {
         return (
           <div
             key={id}
@@ -22,13 +22,16 @@ export default function Comments({ comments }: CommentsProp) {
             ">
               <div className="flex items-center justify-between">
                 <p className="name font-semibold ">{name}</p>
-                <p className="time-difference">{created_at }</p>
-
+                <p className="time-difference text-sm opacity-50">
+                  {created_at}
+                </p>
               </div>
               <p className="email opacity-50 text-sm -mt-1">{email}</p>
             </div>
-<hr className="border w-4/5 my-2 border-light/10 rounded-2xl" />
-            <p className="comment opacity-70">{comment}</p>
+            <hr className="border w-4/5 my-2 border-light/10 rounded-2xl" />
+            <p className="comment opacity-70 w-full whitespace-normal break-words text-base">
+              {comment}
+            </p>
           </div>
         );
       })}

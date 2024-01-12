@@ -1,7 +1,7 @@
 "use server";
 import Comment from "@/app/(models)/comment-model";
 import { revalidatePath } from "next/cache";
-import { formatDistanceToNow } from "date-fns";
+import { formatDistance, subDays } from "date-fns";
 //  await Ticket.create(ticketData);
 export async function createComment(formData: FormData) {
   try {
@@ -10,14 +10,15 @@ export async function createComment(formData: FormData) {
     const commentData = {
       name,
       email,
-      comment,
+      comment: comment.toString(),
     };
 
     const newComment = await Comment.create(commentData);
-
-    console.log("Comment created:", newComment);
     revalidatePath("/contact");
-    console.log("Comment created");
+    return {
+      success: true,
+      message: "Comment created",
+    };
   } catch (error) {
     console.log("something went wrong", error);
     throw new Error(`something went wrong, ${error}`);
@@ -34,8 +35,10 @@ export async function getComments() {
         name,
         email,
         comment,
-        created_at: formatDistanceToNow(new Date(createdAt)),
-
+        created_at: formatDistance(new Date(), new Date(createdAt)).replace(
+          "about ",
+          "" 
+        ),//check the distance between two dates, current date and created date
       };
     });
     return ticketData;
