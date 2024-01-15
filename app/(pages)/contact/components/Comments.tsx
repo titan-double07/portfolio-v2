@@ -26,7 +26,7 @@ export default function Comments({ comments }: CommentsProp) {
 
   return (
     <div className="flex flex-col justify-center items-center w-full gap-5">
-      {comments.map(({ id, name, email, comment, created_at }, index) => {
+      {comments ?comments?.map(({ id, name, email, comment, created_at }, index) => {
         return (
           <div
             key={id}
@@ -57,7 +57,7 @@ export default function Comments({ comments }: CommentsProp) {
             </p>
           </div>
         );
-      })}
+      }):<p className="text-lg">No comments yet</p>}
     </div>
   );
 }

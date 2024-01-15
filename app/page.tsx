@@ -1,11 +1,16 @@
 import React from "react";
 import Tools from "./components/Tools";
 import Link from "next/link";
+import { MotionDiv } from "./lib/framer-motion/motionComponents";
 
 export default function page() {
   return (
     <div className="w-full flex flex-col items-center xl:justify-center text-center container h-full pt-8 pb-5 sm:pt-10  ">
-      <div className="flex flex-col   ">
+      <MotionDiv
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 5 }}
+        className="flex flex-col   ">
         <h1 className="font-semibold capitalize">chisom okereke</h1>
         <h2 className="text-tetiary pb-3 font-semibold capitalize">
           web developer
@@ -15,7 +20,7 @@ export default function page() {
           easy-to-navigate sites that leave a positive impression and works
           seamlessly well.
         </p>
-      </div>
+      </MotionDiv>
       <Tools />
       <Link
         href="https://drive.google.com/file/d/1cXMznTFdK8RXDO1FPuRWD67zv0EhPOUf/view?usp=sharing"

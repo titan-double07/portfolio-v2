@@ -1,7 +1,7 @@
 "use server";
 import Comment from "@/app/(models)/comment-model";
 import { revalidatePath } from "next/cache";
-import { formatDistance, subDays } from "date-fns";
+import { formatDistance } from "date-fns";
 //  await Ticket.create(ticketData);
 export async function createComment(formData: FormData) {
   try {
@@ -26,6 +26,7 @@ export async function createComment(formData: FormData) {
 }
 export async function getComments() {
   try {
+    
     let ticketData = await Comment.find();
     ticketData = ticketData.map((ticket) => {
       const { _id: id, name, email, comment,createdAt } = ticket;
@@ -43,6 +44,7 @@ export async function getComments() {
     });
     return ticketData.reverse();
   } catch (error) {
+
     throw new Error(`something went wrong, ${error}`);
   }
 }
@@ -50,11 +52,10 @@ export async function getComments() {
 export async function deleteComment(id: string, formData: FormData) {
   const password=formData.get('password') as string
   try {
-    console.log(id, password)
     if(password === process.env.DELETE_PASSWORD){
-      console.log("password is correct",)
       await Comment.findByIdAndDelete(id)
       revalidatePath("/contact");
+      console.log("password is correct and message has been deleted",)
     } else {
       console.log("password is incorrect")
     }

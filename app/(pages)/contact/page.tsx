@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { FaEnvelope, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import CommentForm from "./components/CommentForm";
 import Comments from "./components/Comments";
@@ -52,7 +52,9 @@ export default async function Contact() {
         <p className="mb-2"> {`You're also free to leave a comment as well`}</p>
         <CommentForm />
         <br />
+        <Suspense fallback={<div>Loading comments...</div>}>
         <Comments comments={comments} />
+        </Suspense>
       </section>
     </div>
   );

@@ -75,15 +75,13 @@ export default function CommentForm() {
         <textarea
           name="comment"
           id="comment"
-          className="block py-2.5 px-0 w-full text-base  bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
+          className="block py-2.5 px-0 w-full text-base bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
           cols={30}
           rows={3}
           required
           maxLength={maxLength}
-          onChange={handleChange}>
-          {" "}
-          
-        </textarea>
+          onChange={handleChange}
+          placeholder=""></textarea>
         <label
           htmlFor="message"
           className="peer-focus:font-medium absolute text-sm text-light duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-tetiary  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-6">
@@ -93,9 +91,6 @@ export default function CommentForm() {
           {maxLength - comment.length} characters left (maximum {maxLength}{" "}
           characters)
         </div>
-        {/* <div>
-          {remainingCharacters} characters left (maximum {maxLength} characters)
-        </div> */}
       </div>
       <SubmitButton />
       {toast && <p className="text-tetiary/80 text-sm -mt-4">{toast}</p>}

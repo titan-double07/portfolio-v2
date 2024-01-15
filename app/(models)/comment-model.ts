@@ -6,11 +6,32 @@ if (!process.env.MONGODB_URI) {
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.Promise = global.Promise;
 
-const commentSchema = new Schema(
+type Comment = {
+  name: string;
+  email: string;
+  comment: string;
+}
+
+const commentSchema = new Schema<Comment>(
   {
-    name: String,
-    email: String,
-    comment: String,
+    name: {
+      type: String,
+      required: [true, "name is required"],
+      trim: true,
+
+
+    },
+    email: {
+      type: String,
+      required: [true, "email is required"],
+      trim: true,
+    },
+
+    comment: {
+      type: String,
+      required: [true, "comment should not be empty"],
+      trim: true,
+    },
   },
   { 
     //handles he createdAt and updatedAt dates

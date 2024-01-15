@@ -8,7 +8,7 @@ import {
   FaUserAstronaut,
   FaCommentDots,
 } from "react-icons/fa";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { TbBrandBootstrap, TbBrandFramerMotion, TbBrandHtml5, TbBrandMongodb, TbBrandNextjs, TbBrandNodejs, TbBrandReact, TbBrandRedux, TbBrandTailwind, TbBrandTypescript } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 import {
   SiTailwindcss,
@@ -17,7 +17,10 @@ import {
   SiRedux,
   SiReactquery,
 } from "react-icons/si";
+import { TbBrandCss3 } from "react-icons/tb";
+import { MdHtml } from "react-icons/md";
 import { AboutPageData, Link, Project, Tools } from "./types/types";
+import { FaCss3, FaNode, FaNodeJs } from "react-icons/fa6";
 
 
 export const links: Link[] = [
@@ -49,45 +52,56 @@ export const links: Link[] = [
 
 export const tools: Tools[] = [
   {
-    text: "Next.js",
-    icon: <SiNextdotjs className="icon " />,
+    text: "NextJs",
+    icon: <TbBrandNextjs className="icon " />,
   },
   {
     text: "React",
-    icon: <FaReact className="text-[#58c5ee] " />,
+    icon: <TbBrandReact className="text-[#58c5ee] " />,
   },
   {
-    text: "Tailwind",
-    icon: <SiTailwindcss className="text-[#58c5ee]" />,
+    text: "TypeScript",
+    icon: <TbBrandTypescript className="icon text-[#58c5ee]" />,
+  },
+  {
+    text: "Redux",
+    icon: <TbBrandRedux className="text-[#8712f7]" />,
   },
   {
     text: "Framer Motion",
     icon: <TbBrandFramerMotion className="icon" />,
   },
   {
-    text: "TypeScript",
-    icon: <SiTypescript className="icon text-[#58c5ee]" />,
-  },
-  {
-    text: "HTML",
-    icon: <FaHtml5 className="text-[orangered]" />,
-  },
-  {
-    text: "CSS",
-    icon: <FaCss3Alt className="text-[#58c5ee]" />,
-  },
-  {
-    text: "Javascript",
-    icon: <IoLogoJavascript className="text-[#f5de19]" />,
+    text: "Tailwind",
+    icon: <TbBrandTailwind className="text-[#58c5ee]" />,
   },
 
   {
     text: "Bootstrap",
-    icon: <FaBootstrap className="text-[#8712f7]" />,
+    icon: <TbBrandBootstrap className="text-[#8712f7]" />,
+  },
+
+  {
+    text: "mongoDB",
+    icon: <TbBrandMongodb className="icon text-[#4f983f]" />,
+  },
+
+  {
+    text: "NodeJs",
+    icon: <TbBrandNodejs className="icon text-[#4f983f]" />,
   },
   {
-    text: "Redux",
-    icon: <SiRedux className="text-[#8712f7]" />,
+    text: "Javascript",
+    icon: <TbBrandHtml5 className="text-[#f5de19]" />,
+  },
+  {
+    text: "CSS",
+    icon: <TbBrandCss3 className="text-[#58c5ee]" />,
+  },
+
+  {
+    text: "HTML",
+    icon: <TbBrandHtml5 className="text-[orangered]" />,
   },
 ];
 
