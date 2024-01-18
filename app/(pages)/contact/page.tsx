@@ -3,15 +3,21 @@ import { FaEnvelope, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import CommentForm from "./components/CommentForm";
 import Comments from "./components/Comments";
 import { getComments } from "./commentActions";
-import CommentsModal from "./components/CommentsModal";
+import { MotionDiv, containerVariant, itemVariant } from "@/app/lib/framer-motion/motionComponents";
 
+
+// export const revalidate = 1;
 export default async function Contact() {
   const comments = await getComments();
 
   return (
-    <div className="container py-6 sm:py-10 flex flex-col gap-8 ">
+    <MotionDiv
+      variants={itemVariant}
+      initial="hidden" 
+      animate="show"
+      className="container py-6 sm:py-10 flex flex-col gap-8  ">
    
-      <section className="contact-section  flex flex-col items-center justify-center gap-2 text-center">
+      <section className="  contact-section  flex flex-col items-center justify-center gap-5 text-center">
         <p className="">
           {" "}
           Hey there!, you can reach me through any of the following...
@@ -47,15 +53,13 @@ export default async function Contact() {
             <p className=" text-base ">twitter</p>
           </a>
         </div>
-      </section>
-      <section className="comment-section text-center flex flex-col items-center justify-center gap-2 ">
         <p className="mb-2"> {`You're also free to leave a comment as well`}</p>
         <CommentForm />
         <br />
-        <Suspense fallback={<div>Loading comments...</div>}>
-        <Comments comments={comments} />
-        </Suspense>
       </section>
-    </div>
+      <section className="comment-section  ">
+        <Comments comments={comments} />
+      </section>
+    </MotionDiv>
   );
 }

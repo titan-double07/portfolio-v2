@@ -3,10 +3,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { createComment } from "../commentActions";
 import { useFormStatus } from "react-dom";
 import { FaSpinner } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function CommentForm() {
   const ref = useRef<HTMLFormElement>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const router = useRouter();
   const [comment, setComment] = useState("");
   const maxLength = 200;
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -33,6 +35,7 @@ export default function CommentForm() {
           const res = await createComment(formData);
           if (res.success) {
             setToast(res.message);
+            router.push("/contact#comments",{scroll:true});
           }
           ref.current?.reset();
         } catch (error) {}

@@ -1,26 +1,29 @@
 import {
   FaHome,
   FaSuitcase,
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaBootstrap,
   FaUserAstronaut,
   FaCommentDots,
 } from "react-icons/fa";
-import { TbBrandBootstrap, TbBrandFramerMotion, TbBrandHtml5, TbBrandMongodb, TbBrandNextjs, TbBrandNodejs, TbBrandReact, TbBrandRedux, TbBrandTailwind, TbBrandTypescript } from "react-icons/tb";
-import { IoLogoJavascript } from "react-icons/io5";
 import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiTypescript,
-  SiRedux,
+  TbBrandBootstrap,
+  TbBrandFramerMotion,
+  TbBrandHtml5,
+  TbBrandMongodb,
+  TbBrandNextjs,
+  TbBrandNodejs,
+  TbBrandReact,
+  TbBrandRedux,
+  TbBrandTailwind,
+  TbBrandTypescript,
+  TbBrandJavascript,
+  TbBrandCss3
+} from "react-icons/tb";
+
+import {
   SiReactquery,
 } from "react-icons/si";
-import { TbBrandCss3 } from "react-icons/tb";
-import { MdHtml } from "react-icons/md";
+
 import { AboutPageData, Link, Project, Tools } from "./types/types";
-import { FaCss3, FaNode, FaNodeJs } from "react-icons/fa6";
 
 
 export const links: Link[] = [
@@ -92,7 +95,7 @@ export const tools: Tools[] = [
   },
   {
     text: "Javascript",
-    icon: <TbBrandHtml5 className="text-[#f5de19]" />,
+    icon: <TbBrandJavascript className="text-[#f5de19]" />,
   },
   {
     text: "CSS",
@@ -108,12 +111,12 @@ export const tools: Tools[] = [
 export const aboutPageData: AboutPageData = {
   about: {
     description: [
+      `My ultimate goal is to use my web development skills to help others by solving problems and making their lives easier. I am aware that this will require hard work, dedication, and a willingness to learn, but I'm excited about the possibilities that lie ahead 💯😁.`,
       `I began my journey into the world of web development in 2021, but it wasn't until 2022 that I decided to take it seriously and fully commit myself to it. Despite the challenges I faced along the way, I found myself falling in love with the process.`,
 
-      `At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I refused to give up. I persisted and continued to push forward, one step at a time 💪, until I realized how much I had grown. Looking back, I'm proud of the progress I have made and how far I have come 😌.,`,
+      `At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I refused to give up. I persisted and continued to push forward, one step at a time 💪, until I realized how much I had grown. Looking back, I'm proud of the progress I have made and how far I have come 😌.`,
       `During my leisure time, I enjoy swimming 🏊‍♂️, reading(manga😅), listening to music and audiobooks, watching movies, drawing, and playing games and of course coding 👨‍💻. Although I've had to reduce the amount of time I spend on these activities, I accept it as a small sacrifice to achieve my goal of becoming a developer.`,
 
-      `My ultimate goal is to use my web development skills to help others by solving problems and making their lives easier. I am aware that this will require hard work, dedication, and a willingness to learn, but I'm excited about the possibilities that lie ahead 💯😁.`,
     ],
     education: {
       institution: "Federal University of Technology,Owerri",
@@ -152,8 +155,8 @@ export const aboutPageData: AboutPageData = {
       position: "front-end developer ",
       date: "NOV - DEC, 2023",
       description: [
-        "Developed and implemented user - facing features for their web applications ",
-        "Ensured proper API integration, making sure it fuctiond properly and as expected",
+        "Developed and implemented user-facing features for their web applications ",
+        "Ensured proper API integration, making sure it functioned properly and as expected",
         "Further boosted my proficiency with Next.Js as I encountered bugs and resolved those bug by seeking out more knowlege and better understanding next.js",
       ],
     },
@@ -172,7 +175,7 @@ export const aboutPageData: AboutPageData = {
       position: "public relations officer",
       date: "AUG, 2019",
       description: [
-        "Worked with the community relations department of seplat petroleum development company now seplat energy at the 2019 Seplat energy community development program for ohaji egbema in Owerri imo state",
+        "Worked with the community relations department at Seplat energy community development program for ohaji egbema in Owerri imo state",
         "Gained better knowledge and experience in communication and dealing with people",
       ],
     },
@@ -221,15 +224,15 @@ export const projects: Project[] = [
     tools: [
       {
         text: "Next.js",
-        icon: <SiNextdotjs className="icon " />,
+        icon: <TbBrandNextjs className="icon " />,
       },
       {
         text: "Tailwind",
-        icon: <SiTailwindcss className="text-[#58c5ee]" />,
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
       {
         text: "Redux",
-        icon: <SiRedux className="text-[#764abc]" />,
+        icon: <TbBrandRedux className="text-[#764abc]" />,
       },
       {
         text: "Framer Motion",
@@ -247,11 +250,11 @@ export const projects: Project[] = [
     tools: [
       {
         text: "Next.js",
-        icon: <SiNextdotjs className="icon " />,
+        icon: <TbBrandNextjs className="icon " />,
       },
       {
         text: "Tailwind",
-        icon: <SiTailwindcss className="text-[#58c5ee]" />,
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
       {
         text: "Framer Motion",
@@ -269,15 +272,15 @@ export const projects: Project[] = [
     tools: [
       {
         text: "React",
-        icon: <FaReact className="text-[#58c5ee] " />,
+        icon: <TbBrandReact className="text-[#58c5ee] " />,
       },
       {
         text: "Tailwind",
-        icon: <SiTailwindcss className="text-[#58c5ee]" />,
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
       {
         text: "Redux",
-        icon: <SiRedux className="text-[#8712f7]" />,
+        icon: <TbBrandRedux className="text-[#8712f7]" />,
       },
     ],
   },
@@ -291,7 +294,7 @@ export const projects: Project[] = [
     tools: [
       {
         text: "React",
-        icon: <FaReact className="text-[#58c5ee] " />,
+        icon: <TbBrandReact className="text-[#58c5ee] " />,
       },
 
       {
@@ -300,7 +303,7 @@ export const projects: Project[] = [
       },
       {
         text: "Tailwind",
-        icon: <SiTailwindcss className="text-[#58c5ee]" />,
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
     ],
   },
@@ -313,11 +316,11 @@ export const projects: Project[] = [
     tools: [
       {
         text: "React",
-        icon: <FaReact className="text-[#58c5ee] " />,
+        icon: <TbBrandReact className="text-[#58c5ee] " />,
       },
       {
         text: "CSS",
-        icon: <FaCss3Alt className="text-[#58c5ee]" />,
+        icon: <TbBrandCss3 className="text-[#58c5ee]" />,
       },
     ],
   },
@@ -331,11 +334,11 @@ export const projects: Project[] = [
     tools: [
       {
         text: "React",
-        icon: <FaReact className="text-[#58c5ee] " />,
+        icon: <TbBrandReact className="text-[#58c5ee] " />,
       },
       {
         text: "Tailwind",
-        icon: <SiTailwindcss className="text-[#58c5ee]" />,
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
     ],
   },
@@ -344,19 +347,20 @@ export const projects: Project[] = [
     gitUrl: "https://github.com/titanwarlord007/simple-shopping-cart",
     title: "Simple Shopping Cart",
     image: "/images/simple-shopping-cart.png",
-    description: "A Simple Shopping Cart made with redux, used to learn and  practice how redux works ,built with react and tailwind",
+    description:
+      "A Simple Shopping Cart made with redux, used to learn and  practice how redux works ,built with react and tailwind",
     tools: [
       {
         text: "React",
-        icon: <FaReact className="text-[#58c5ee] " />,
+        icon: <TbBrandReact className="text-[#58c5ee] " />,
       },
       {
         text: "CSS",
-        icon: <FaCss3Alt className="text-[#58c5ee]" />,
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
       {
         text: "Redux",
-        icon: <SiRedux className="text-[#8712f7]" />,
+        icon: <TbBrandRedux className="text-[#8712f7]" />,
       },
     ],
   },
@@ -369,15 +373,15 @@ export const projects: Project[] = [
     tools: [
       {
         text: "HTML",
-        icon: <FaHtml5 className="text-[orangered]" />,
+        icon: <TbBrandHtml5 className="text-[orangered]" />,
       },
       {
         text: "CSS",
-        icon: <FaCss3Alt className="text-[#58c5ee]" />,
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
       {
         text: "Javascript",
-        icon: <IoLogoJavascript className="text-[#f5de19]" />,
+        icon: <TbBrandJavascript className="text-[#f5de19]" />,
       },
     ],
   },
@@ -390,11 +394,11 @@ export const projects: Project[] = [
     tools: [
       {
         text: "HTML",
-        icon: <FaHtml5 className="text-[orangered]" />,
+        icon: <TbBrandHtml5 className="text-[orangered]" />,
       },
       {
         text: "Bootstrap",
-        icon: <FaBootstrap className="text-[#8712f7]" />,
+        icon: <TbBrandBootstrap className="text-[#8712f7]" />,
       },
     ],
   },

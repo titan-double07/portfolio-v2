@@ -9,7 +9,8 @@ import LgNavBar from "./components/LgNavBar";
 import Image from "next/image";
 import Profile from "./components/Profile";
 import SplashScreen from "./components/SplashScreen";
-import LazyMotion from './lib/framer-motion/LazyMotion'
+import LazyMotion from "./lib/framer-motion/LazyMotion";
+import { MotionDiv, m } from "./lib/framer-motion/motionComponents";
 const ysabeau = Ysabeau({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="chef.png" sizes="any" />
+      </head>
       <body
         suppressHydrationWarning
         className={`${ysabeau.className}  bg-dark h-screen text-light relative leading-relaxed tracking-wide  `}>
@@ -46,7 +50,13 @@ export default function RootLayout({
                   <LgNavBar />
                 </div>
 
-                <div className="parent-layout-container lg:w-4/5 xl:w-5/6  xl:bg-secondary xl:rounded-[40px] lg:flex lg:justify-center lg:items-center lg:h-full max-w-screen-xl xl:h-[90%] lg:max-h-[700px] xl:glow">
+                <MotionDiv
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  animate={{ opacity: 1, scaleX: 1 }}
+                  transition={{
+                    duration: 0.8,
+                  }}
+                  className="parent-layout-container lg:w-4/5 xl:w-5/6  xl:bg-secondary xl:rounded-[40px] lg:flex lg:justify-center lg:items-center lg:h-full max-w-screen-xl xl:h-[90%] lg:max-h-[700px] xl:glow">
                   <div className="hidden xl:block xl:w-2/6 xl:h-full  ">
                     <Profile />
                   </div>
@@ -59,7 +69,7 @@ export default function RootLayout({
                       {children}
                     </main>
                   </div>
-                </div>
+                </MotionDiv>
 
                 <div className="lg:hidden">
                   <NavBar />

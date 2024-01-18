@@ -4,13 +4,13 @@ import {
   AnimatePresence,
   stagger,
   useAnimate,
-  usePresence,
+
   m,
 } from "framer-motion";
 import Image from "next/image";
 import chef from "../../public/images/serving-chef.svg";
 import { tools } from "../data";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function SplashScreen({
   children,
@@ -20,7 +20,8 @@ export default function SplashScreen({
   const [isAnimating, setIsAnimating] = useState(true);
   const pathname = usePathname();
   const [scope, animate] = useAnimate();
-  const [isPresent, safeToRemove] = usePresence();
+  const router = useRouter()
+
   const includedText = [
     "html",
     "css",
@@ -45,8 +46,7 @@ export default function SplashScreen({
         { scale: [1.5, 1] },
         {
           type: "spring",
-          duration: 1,
-          delay: 2,
+          delay: 3,
           ease: "easeInOut",
         }
       );
@@ -57,7 +57,7 @@ export default function SplashScreen({
 
         {
           delay: stagger(0.5, { ease: "easeInOut" }),
-          duration:2,
+          duration: 3,
           ease: "easeInOut",
         }
       );
@@ -67,10 +67,10 @@ export default function SplashScreen({
         { opacity: [0, 1], scale: [0, 1] },
         {
           type: "spring",
-          stiffness: 60,
-          damping: 5,
-          mass: 0.5,
-          delay: 2.8,
+          // stiffness: 60,
+          // damping: 5,
+          // mass: 0.5,
+          delay: 3.5,
           ease: "easeInOut",
         }
       );
@@ -84,7 +84,6 @@ export default function SplashScreen({
           delay: stagger(0.2, {
             from: "last",
             startDelay: 4,
-            ease: "linear",
           }),
           ease: "easeInOut",
         }
@@ -93,15 +92,16 @@ export default function SplashScreen({
       console.log("animation completed");
       setIsAnimating(false);
     };
-if(scope.current)
-    animation();
-  }, [animate, scope, pathname]);
+    if (scope.current)
+      animation();
+  
+  }, [animate, scope]);
 
   return (
     <div className=" bg-dark absolute inset-0 h-screen  ">
-      <AnimatePresence>
-        {isAnimating && pathname == "/" ? (
-          isAnimating && (
+      <AnimatePresence mode="wait">
+        {isAnimating? (
+          
             <m.div
               ref={scope}
               key={"loading"}
@@ -109,9 +109,7 @@ if(scope.current)
               animate={{ opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{
-                duration: 1,
                 type: "spring",
-
               }}
               className="flex flex-col gap-5 mx-auto items-center justify-center h-full w-fit   relative">
               <div className="relative">
@@ -147,8 +145,8 @@ if(scope.current)
 
                 <Image
                   src={chef}
-                  alt="profile-pic"
-                  quality={100}
+                  alt="chef holding a tray"
+                  priority
                   className="w-[230px] sm:w-[280px] h-auto image  "
                 />
               </div>
@@ -187,7 +185,7 @@ if(scope.current)
                 />
               </svg>
             </m.div>
-          )
+     
         ) : (
           <React.Fragment key={"children"}>{children}</React.Fragment>
         )}

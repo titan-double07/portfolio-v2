@@ -2,6 +2,8 @@
 import Comment from "@/app/(models)/comment-model";
 import { revalidatePath } from "next/cache";
 import { formatDistance } from "date-fns";
+import { cache } from 'react'
+import { redirect } from "next/navigation";
 //  await Ticket.create(ticketData);
 export async function createComment(formData: FormData) {
   try {
@@ -15,21 +17,27 @@ export async function createComment(formData: FormData) {
 
     const newComment = await Comment.create(commentData);
     revalidatePath("/contact");
+
     return {
       success: true,
       message: "Comment created",
     };
   } catch (error) {
-    console.log("something went wrong", error);
-    throw new Error(`something went wrong, ${error}`);
+    return {
+      success: false,
+      message: `something went wrong, ${error}`,
+    };
+  
   }
 }
-export async function getComments() {
+
+export const getComments =  async () => {
   try {
-    
-    let ticketData = await Comment.find();
-    ticketData = ticketData.map((ticket) => {
-      const { _id: id, name, email, comment,createdAt } = ticket;
+    // Simulate a delay of seconds
+    // await new Promise((resolve) => setTimeout(resolve, 5000));
+    let ticketData = await Comment.find({});
+    ticketData = ticketData?.map((ticket) => {
+      const { _id: id, name, email, comment, createdAt } = ticket;
       // console.log(ticket);
       return {
         id: id.toString(),
@@ -38,30 +46,46 @@ export async function getComments() {
         comment,
         created_at: formatDistance(new Date(), new Date(createdAt)).replace(
           "about ",
-          "" 
-        ),//check the distance between two dates, current date and created date
+          ""
+        ), //check the distance between two dates, current date and created date
       };
     });
-    return ticketData.reverse();
+    return {
+      success: true,
+      data: ticketData.reverse(),
+    };
   } catch (error) {
+     console.error("Error fetching comments:", error);
+     return {
+       success: false,
+       message: `something went wrong, ${error}`,
+     };
 
-    throw new Error(`something went wrong, ${error}`);
-  }
+   }
 }
-
 export async function deleteComment(id: string, formData: FormData) {
-  const password=formData.get('password') as string
+  const password = formData.get("password") as string;
   try {
-    if(password === process.env.DELETE_PASSWORD){
-      await Comment.findByIdAndDelete(id)
+    if (password === process.env.DELETE_PASSWORD) {
+      await Comment.findByIdAndDelete(id);
       revalidatePath("/contact");
-      console.log("password is correct and message has been deleted",)
+      console.log("password is correct and message has been deleted");
+      return {
+        success: true,
+        message: "Comment deleted successfully",
+      };
     } else {
-      console.log("password is incorrect")
+      console.log("password is incorrect");
+      return {
+        success: false,
+        message: "Incorrect password",
+      };
     }
-    
-
-  } catch(error) {
-    throw new Error(`something went wrong, ${error}`);
+  } catch (error) {
+    console.error("Error deleting comment:", error);
+    return {
+      success: false,
+      message: `Something went wrong: ${error}`,
+    };
   }
 }

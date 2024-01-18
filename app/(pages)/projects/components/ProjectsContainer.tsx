@@ -2,15 +2,21 @@ import React from "react";
 import { projects } from "@/app/data";
 import Image from "next/image";
 import Tools from "./Tools";
+import { MotionUl, MotionLi, itemVariant,containerVariant } from "@/app/lib/framer-motion/motionComponents";
 
 export default function ProjectsContainer() {
   return (
-    <ul className="flex flex-col lg:flex-wrap lg:flex-row justify-center items-center gap-8 pt-10 w-full ">
+    <MotionUl
+      variants={containerVariant}
+      initial="hidden"
+      animate="show"
+      className="flex flex-col lg:flex-wrap lg:flex-row justify-center items-center gap-8 pt-10 w-full ">
       {projects.map((project, index) => {
         const { title, description, image, tools, url, gitUrl } = project;
         // console.log(gitUrl)
         return (
-          <li
+          <MotionLi
+            variants={itemVariant}
             key={index}
             className="relative border w-full  lg:w-[300px] flex flex-col   rounded-lg h-[400px] ">
             <div className="relative w-full  h-1/2 ">
@@ -46,9 +52,9 @@ export default function ProjectsContainer() {
               <h4 className="font-bold capitalize lg:text-lg">{title}</h4>
               <p className="text-light/70 text-base">{description}</p>
             </div>
-          </li>
+          </MotionLi>
         );
       })}
-    </ul>
+    </MotionUl>
   );
 }
