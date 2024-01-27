@@ -4,13 +4,12 @@ import {
   AnimatePresence,
   stagger,
   useAnimate,
-
   m,
 } from "framer-motion";
 import Image from "next/image";
 import chef from "../../public/images/serving-chef.svg";
 import { tools } from "../data";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function SplashScreen({
   children,
@@ -18,9 +17,8 @@ export default function SplashScreen({
   children: React.ReactNode;
 }) {
   const [isAnimating, setIsAnimating] = useState(true);
-  const pathname = usePathname();
+const pathname = usePathname();
   const [scope, animate] = useAnimate();
-  const router = useRouter()
 
   const includedText = [
     "html",
@@ -77,10 +75,12 @@ export default function SplashScreen({
       //animates the icons, giving them a stagger effect and they fall down
       await animate(
         ".icon",
-        { opacity: [0, 1], y: [-20, 0] },
+        { opacity: [0, 1], y: [-50, 0] },
         {
+         
           type: "spring",
-          damping: 7,
+          damping: 8,
+          mass: 0.9,
           delay: stagger(0.2, {
             from: "last",
             startDelay: 4,
@@ -92,10 +92,19 @@ export default function SplashScreen({
       console.log("animation completed");
       setIsAnimating(false);
     };
-    if (scope.current)
+    if (scope.current && isAnimating && pathname === "/") {
+      
       animation();
   
-  }, [animate, scope]);
+    } else {
+      setIsAnimating(false);
+ 
+
+    }
+ 
+
+  
+  }, [animate, scope, pathname,isAnimating]);
 
   return (
     <div className=" bg-dark absolute inset-0 h-screen  ">
@@ -114,7 +123,7 @@ export default function SplashScreen({
               className="flex flex-col gap-5 mx-auto items-center justify-center h-full w-fit   relative">
               <div className="relative">
                 <div className="icons-container absolute inset-0 -top-2  left-3  h-fit w-fit gap-1 ">
-                  {icons.map(({ icon, text }, index) => {
+                  {icons?.map(({ icon, text }, index) => {
                     // Calculate the number of rows in the pyramid
                     const numRows = Math.ceil(
                       (Math.sqrt(8 * icons.length + 1) - 1) / 2
@@ -133,12 +142,13 @@ export default function SplashScreen({
                     };
 
                     return (
-                      <div
+                      <m.div
+                        initial={{ opacity: 0, y: -50 }}
                         key={text}
                         className={`${text.toLowerCase()} icon text-2xl sm:text-3xl`}
                         style={pyramidStyle}>
                         {icon}
-                      </div>
+                      </m.div>
                     );
                   })}
                 </div>
@@ -193,6 +203,7 @@ export default function SplashScreen({
     </div>
   );
 }
+
 {
   /* <div className={`svg flex items-center gap-2 ${ysabeau_SC.className}`}>
             <p className=" path text-3xl sm:text-5xl tracking-wider">{`Lets's `}</p>

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FaDeleteLeft } from "react-icons/fa6";
 import { deleteComment } from "../commentActions";
@@ -6,9 +8,11 @@ import { redirect } from "next/navigation";
 export default function CommentsModal({
   closeModal,
   id,
+  setToast,
 }: {
   closeModal: () => void;
-  id: string;
+    id: string;
+    setToast: (message: string) => void;
 }) {
 
   return (
@@ -23,8 +27,11 @@ export default function CommentsModal({
       </div>
       <form
         action={async (formData: FormData) => {
-          deleteComment(id, formData);
-          closeModal();
+          try {
+            const res = await deleteComment(id, formData);
+            setToast(res.message);
+            closeModal();
+          } catch (error) {}
           // redirect("/contact#comments");
         }}
         className="w-full  flex flex-col gap-3">

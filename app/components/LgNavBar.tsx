@@ -49,6 +49,7 @@ export default function LgNavBar() {
   return (
     <div ref={scope} className="lg-nav-bar">
       <MotionDiv
+        layout
         initial="hidden"
         animate="visible"
         variants={linksContainerVariants}
@@ -62,7 +63,7 @@ export default function LgNavBar() {
               key={id}
               className={`link group flex flex-col items-center justify-center gap-2 lg:gap-0 relative `}>
               <m.i
-                layout
+          
                 className={`text-3xl rounded-full active:scale-90 relative z-10 
                  ${
                    pathname === url
@@ -71,7 +72,7 @@ export default function LgNavBar() {
                  }
                 `}>
                 {icon}
-                {pathname === url && (
+                {pathname === url ? (
                   <m.span
                   layoutId="pathname"
                     className="bg-secondary group-hover:bg-tetiary rounded-full absolute inset-0 -z-10 "
@@ -80,14 +81,14 @@ export default function LgNavBar() {
                       stiffness: 380,
                       damping: 30,
                     }}></m.span>
-                )}
+                ): null}
               </m.i>
               <p
                 className={` ${
                   pathname === url
                     ? "opacity-100 translate-y-0 text-secondary group-hover:text-tetiary "
                     : "opacity-0 group-hover:text-tetiary "
-                } opacity-0 pointer-events-none group-hover:opacity-100 -translate-y-6 group-hover:translate-y-0 transition-all duration-300 ease-in-out lg:text-base`}>
+                } opacity-0 pointer-events-none group-hover:opacity-100 -translate-y-6 group-hover:translate-y-0  lg:text-base`}>
                 {text}
               </p>
             </MotionLink>

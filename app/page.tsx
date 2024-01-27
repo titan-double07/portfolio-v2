@@ -43,7 +43,9 @@ export default function page() {
       <Tools />
       <MotionLink
         variants={opacityVariant}
-        transition={{ delay: 2 }}
+        initial="hidden"
+        animate="visible"
+        transition={{ ...opacityVariant,delay: 4 }}
         href="https://drive.google.com/file/d/1cXMznTFdK8RXDO1FPuRWD67zv0EhPOUf/view?usp=sharing"
         className=" text-lg px-10 py-4 font-bold rounded-lg  mt-16   uppercase  bg-secondary  text-dark hover:border-4 hover:border-tetiary hover:text-tetiary hover:bg-dark active:scale-90 active:border-tetiary/50 xl:hidden ">
         Download CV
@@ -51,4 +53,4 @@ export default function page() {
     </div>
   );
 }
-//https://drive.google.com/file/d/1cXMznTFdK8RXDO1FPuRWD67zv0EhPOUf/view?usp=sharing
+

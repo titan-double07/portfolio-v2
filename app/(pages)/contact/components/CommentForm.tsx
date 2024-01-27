@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function CommentForm() {
   const ref = useRef<HTMLFormElement>(null);
-  const [toast, setToast] = useState<string | null>(null);
+ 
   const router = useRouter();
   const [comment, setComment] = useState("");
   const maxLength = 200;
@@ -15,18 +15,7 @@ export default function CommentForm() {
     setComment(event.currentTarget.value);
   };
 //  const remainingCharacters = maxLength - comment.length;
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (toast) {
-      timer = setTimeout(() => {
-        setToast(null);
-      }, 3000);
-    }
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [toast]);
   return (
     <form
       ref={ref}
@@ -34,8 +23,7 @@ export default function CommentForm() {
         try {
           const res = await createComment(formData);
           if (res.success) {
-            setToast(res.message);
-            router.push("/contact#comments",{scroll:true});
+            router.push("/contact#comments", { scroll: true });
           }
           ref.current?.reset();
         } catch (error) {}
@@ -62,7 +50,7 @@ export default function CommentForm() {
             type="email"
             name="email"
             id="email"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
             className="block py-2.5 px-0 w-full text-base  bg-transparent border-0 border-b-2 border-light/60 appearance-none focus:outline-none focus:ring-0 focus:border-tetiary peer"
             placeholder=" "
             required
@@ -96,7 +84,6 @@ export default function CommentForm() {
         </div>
       </div>
       <SubmitButton />
-      {toast && <p className="text-tetiary/80 text-sm -mt-4">{toast}</p>}
     </form>
   );
 }

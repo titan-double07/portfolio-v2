@@ -1,10 +1,9 @@
 "use server";
 import Comment from "@/app/(models)/comment-model";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { formatDistance } from "date-fns";
-import { cache } from 'react'
-import { redirect } from "next/navigation";
-//  await Ticket.create(ticketData);
+import { unstable_cache } from "next/cache";
+
 export async function createComment(formData: FormData) {
   try {
     const { name, email, comment } = Object.fromEntries(formData.entries());
@@ -16,7 +15,9 @@ export async function createComment(formData: FormData) {
     };
 
     const newComment = await Comment.create(commentData);
-    revalidatePath("/contact");
+    // revalidatePath("/contact");
+    revalidateTag("comments");
+    
 
     return {
       success: true,
@@ -31,14 +32,14 @@ export async function createComment(formData: FormData) {
   }
 }
 
-export const getComments =  async () => {
+export const getComments = unstable_cache(async () => {
   try {
     // Simulate a delay of seconds
     // await new Promise((resolve) => setTimeout(resolve, 5000));
     let ticketData = await Comment.find({});
     ticketData = ticketData?.map((ticket) => {
       const { _id: id, name, email, comment, createdAt } = ticket;
-      // console.log(ticket);
+
       return {
         id: id.toString(),
         name,
@@ -55,21 +56,26 @@ export const getComments =  async () => {
       data: ticketData.reverse(),
     };
   } catch (error) {
-     console.error("Error fetching comments:", error);
-     return {
-       success: false,
-       message: `something went wrong, ${error}`,
-     };
-
-   }
-}
-export async function deleteComment(id: string, formData: FormData) {
+    console.error("Error fetching comments:", error);
+    return {
+      success: false,
+      message: `something went wrong, ${error}`,
+    };
+  }
+} , undefined,
+  { tags: ["comments"],revalidate:10 }
+);
+export async function deleteComment(id: string,
+  formData: FormData
+) {
   const password = formData.get("password") as string;
   try {
     if (password === process.env.DELETE_PASSWORD) {
       await Comment.findByIdAndDelete(id);
-      revalidatePath("/contact");
+      // revalidatePath("/contact");
+      revalidateTag("comments");
       console.log("password is correct and message has been deleted");
+
       return {
         success: true,
         message: "Comment deleted successfully",

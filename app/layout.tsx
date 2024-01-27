@@ -31,21 +31,23 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${ysabeau.className}  bg-dark h-screen text-light relative leading-relaxed tracking-wide  `}>
+        className={`${ysabeau.className} bg-dark   h-screen text-light relative leading-relaxed tracking-wide  `}>
+        {/* <div className="blob rounded-full   absolute bottom-0 -right-5  w-5 h-5 z-10">
+          
+        </div> */}
         <LazyMotion>
           <SplashScreen>
-            <div className=" layout-bg-img absolute inset-0 -z-10">
-              <Image
-                src="/images/background.webp"
-                alt="background image"
-                fill
-                priority
-                className=" object-cover object-center hidden lg:block"
-              />
-            </div>
-
             <ReduxProvider>
-              <div className="lg:flex  lg:flex-row-reverse lg:justify-center lg:items-center lg:h-screen lg:gap-12  ">
+                {/* <div className=" layout-bg-img absolute inset-0 -z-10">
+                  <Image
+                    src="/images/background.webp"
+                    alt="background image"
+                    fill
+                    priority
+                    className=" object-cover object-center hidden lg:block"
+                  />
+                </div> */}
+              <div className="lg:flex  lg:flex-row-reverse lg:justify-center lg:items-center lg:h-screen lg:gap-12 z-10 ">
                 <div className="hidden lg:block  ">
                   <LgNavBar />
                 </div>
@@ -57,7 +59,7 @@ export default function RootLayout({
                     duration: 0.8,
                   }}
                   className="parent-layout-container lg:w-4/5 xl:w-5/6  xl:bg-secondary xl:rounded-[40px] lg:flex lg:justify-center lg:items-center lg:h-full max-w-screen-xl xl:h-[90%] lg:max-h-[700px] xl:glow">
-                  <div className="hidden xl:block xl:w-2/6 xl:h-full  ">
+                  <div className="hidden xl:block xl:w-2/6   ">
                     <Profile />
                   </div>
 
@@ -65,7 +67,7 @@ export default function RootLayout({
                     <div className="xl:hidden">
                       <SocialBar />
                     </div>
-                    <main className="overflow-auto  mb-20 lg:mb-10 xl:mb-0 xl:h-full ">
+                    <main className="  mb-20 lg:mb-10 xl:mb-0 xl:h-full ">
                       {children}
                     </main>
                   </div>

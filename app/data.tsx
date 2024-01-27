@@ -16,8 +16,10 @@ import {
   TbBrandTailwind,
   TbBrandTypescript,
   TbBrandJavascript,
-  TbBrandCss3
+  TbBrandCss3,
+  TbBrandFigma
 } from "react-icons/tb";
+import { DiPhotoshop } from "react-icons/di";
 
 import {
   SiReactquery,
@@ -105,6 +107,14 @@ export const tools: Tools[] = [
   {
     text: "HTML",
     icon: <TbBrandHtml5 className="text-[orangered]" />,
+  },
+  {
+    text: "Figma",
+    icon: <TbBrandFigma className="" />,
+  },
+  {
+    text: "Photoshop",
+    icon: <DiPhotoshop className="" />,
   },
 ];
 
@@ -284,29 +294,7 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    url: "https://traders-app-teal.vercel.app/",
-    gitUrl: "https://github.com/titanwarlord007/traders-app",
-    title: "Stock Watchlist App",
-    image: "/images/traders-app.png",
-    description:
-      "A simple lightweight app for watching and tracking your favourite stock and staying updated on its performance. developed with React, CSS, and React Query,  using  useContext hook to efficiently manage and access shared data as well as custom hooks to encapsulate reusable logic, promoting code reusability.",
-    tools: [
-      {
-        text: "React",
-        icon: <TbBrandReact className="text-[#58c5ee] " />,
-      },
-
-      {
-        text: "React Query",
-        icon: <SiReactquery className="text-[#ff3300]" />,
-      },
-      {
-        text: "Tailwind",
-        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
-      },
-    ],
-  },
+  
   {
     url: "https://chisomwebdev.vercel.app/",
     gitUrl: "https://github.com/titanwarlord007/portfolio",
@@ -342,66 +330,8 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    url: "https://simple-shopping-cart-two.vercel.app/",
-    gitUrl: "https://github.com/titanwarlord007/simple-shopping-cart",
-    title: "Simple Shopping Cart",
-    image: "/images/simple-shopping-cart.png",
-    description:
-      "A Simple Shopping Cart made with redux, used to learn and  practice how redux works ,built with react and tailwind",
-    tools: [
-      {
-        text: "React",
-        icon: <TbBrandReact className="text-[#58c5ee] " />,
-      },
-      {
-        text: "CSS",
-        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
-      },
-      {
-        text: "Redux",
-        icon: <TbBrandRedux className="text-[#8712f7]" />,
-      },
-    ],
-  },
-  {
-    url: "https://titanwarlord007.github.io/Make-A-Wish-copy/",
-    gitUrl: "https://github.com/titanwarlord007/Make-A-Wish-copy",
-    title: "Make A Wish website",
-    image: "/images/Make-A-Wish-copy_img.webp",
-    description: "A copy of the Make A Wish foundation landing page",
-    tools: [
-      {
-        text: "HTML",
-        icon: <TbBrandHtml5 className="text-[orangered]" />,
-      },
-      {
-        text: "CSS",
-        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
-      },
-      {
-        text: "Javascript",
-        icon: <TbBrandJavascript className="text-[#f5de19]" />,
-      },
-    ],
-  },
-  {
-    url: "https://titanwarlord007.github.io/bootstrap-website/",
-    gitUrl: "https://github.com/titanwarlord007/bootstrap-website",
-    title: "Bootstrap Website",
-    image: "/images/bootstrap-website_img.png",
-    description: "A mock bootstrap landing page, ",
-    tools: [
-      {
-        text: "HTML",
-        icon: <TbBrandHtml5 className="text-[orangered]" />,
-      },
-      {
-        text: "Bootstrap",
-        icon: <TbBrandBootstrap className="text-[#8712f7]" />,
-      },
-    ],
-  },
+ 
+
 ];
 
 
