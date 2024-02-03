@@ -17,16 +17,13 @@ import {
   TbBrandTypescript,
   TbBrandJavascript,
   TbBrandCss3,
-  TbBrandFigma
+  TbBrandFigma,
 } from "react-icons/tb";
 import { DiPhotoshop } from "react-icons/di";
 
-import {
-  SiReactquery,
-} from "react-icons/si";
+import { SiReactquery } from "react-icons/si";
 
 import { AboutPageData, Link, Project, Tools } from "./types/types";
-
 
 export const links: Link[] = [
   {
@@ -49,8 +46,8 @@ export const links: Link[] = [
   },
   {
     id: 4,
-    url: "/contact",
-    text: "Contact",
+    url: "/comment",
+    text: "Comment",
     icon: <FaCommentDots />,
   },
 ];
@@ -126,7 +123,6 @@ export const aboutPageData: AboutPageData = {
 
       `At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I refused to give up. I persisted and continued to push forward, one step at a time 💪, until I realized how much I had grown. Looking back, I'm proud of the progress I have made and how far I have come 😌.`,
       `During my leisure time, I enjoy swimming 🏊‍♂️, reading(manga😅), listening to music and audiobooks, watching movies, drawing, and playing games and of course coding 👨‍💻. Although I've had to reduce the amount of time I spend on these activities, I accept it as a small sacrifice to achieve my goal of becoming a developer.`,
-
     ],
     education: {
       institution: "Federal University of Technology,Owerri",
@@ -294,9 +290,9 @@ export const projects: Project[] = [
       },
     ],
   },
-  
+
   {
-    url: "https://chisomwebdev.vercel.app/",
+    url: "https://old-portfolio-v1.vercel.app/",
     gitUrl: "https://github.com/titanwarlord007/portfolio",
     title: "Old Portfolio Website",
     image: "/images/portfolio-img.png",
@@ -330,8 +326,4 @@ export const projects: Project[] = [
       },
     ],
   },
- 
-
 ];
-
-

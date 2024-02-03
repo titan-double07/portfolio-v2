@@ -23,7 +23,7 @@ export default function CommentForm() {
         try {
           const res = await createComment(formData);
           if (res.success) {
-            router.push("/contact#comments", { scroll: true });
+            router.push("/comment#comments", { scroll: true });
           }
           ref.current?.reset();
         } catch (error) {}

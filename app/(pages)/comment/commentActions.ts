@@ -62,8 +62,11 @@ export const getComments = unstable_cache(async () => {
       message: `something went wrong, ${error}`,
     };
   }
-} , undefined,
-  { tags: ["comments"],revalidate:10 }
+},["comments"],
+  { tags: ["comments"] }
+
+
+
 );
 export async function deleteComment(id: string,
   formData: FormData
