@@ -221,7 +221,7 @@ export const aboutPageData: AboutPageData = {
 export const projects: Project[] = [
   {
     url: "https://loopstudios-titanweb.vercel.app/",
-    gitUrl: "https://github.com/titanwarlord007/loopstudios-landing-page",
+    gitUrl: "https://github.com/titan-double07/loopstudios-landing-page",
     title: "Loopstudios landing page",
     image: "/images/loopstudios-desktop-min.png",
     description:
@@ -248,7 +248,7 @@ export const projects: Project[] = [
   },
   {
     url: "https://multi-stage-form-beta.vercel.app/",
-    gitUrl: "https://github.com/titanwarlord007/multi-stage-form",
+    gitUrl: "https://github.com/titan-double07/multi-stage-form",
     title: "Multi-stage SignUp Form",
     image: "/images/multi-stage-signUp-form.png",
     description:
@@ -270,7 +270,7 @@ export const projects: Project[] = [
   },
   {
     url: "https://rock-paper-scissors-app-seven.vercel.app/",
-    gitUrl: "https://github.com/titanwarlord007/rock-paper-scissors-app",
+    gitUrl: "https://github.com/titan-double07/rock-paper-scissors-app",
     title: "Rock-Paper-Scissors App",
     image: "/images/rock-paper-scissors-app.png",
     description:
@@ -293,7 +293,7 @@ export const projects: Project[] = [
 
   {
     url: "https://old-portfolio-v1.vercel.app/",
-    gitUrl: "https://github.com/titanwarlord007/portfolio",
+    gitUrl: "https://github.com/titan-double07/portfolio",
     title: "Old Portfolio Website",
     image: "/images/portfolio-img.png",
     description: `This is an older version of my portfolio website. It features a responsive design and an attractive UI, which highlights my progress as a developer. I also meticulously organized the database so that it could be used to populate different pages and make editing more convenient. The website was built using CSS and React.`,
@@ -310,7 +310,7 @@ export const projects: Project[] = [
   },
   {
     url: "https://ecommerce-product-page-nine-mauve.vercel.app/",
-    gitUrl: "https://github.com/titanwarlord007/ecommerce-product-page",
+    gitUrl: "https://github.com/titan-double07/ecommerce-product-page",
     title: "Ecommerce product page",
     image: "/images/ecommerce-product-page.png",
     description:

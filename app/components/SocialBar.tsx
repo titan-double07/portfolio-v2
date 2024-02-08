@@ -48,7 +48,7 @@ export default function SocialBar() {
       </a>
       <a
         target="_blank"
-        href="https://github.com/titanwarlord007"
+        href="https://github.com/titan-double07"
         className="hover:text-tetiary xl:hover:text-light xl:w-full xl:justify-start flex flex-col xl:flex-row xl:gap-4 justify-center items-center">
         <FaGithubSquare className="text-2xl sm:text-3xl xl:text-2xl" />
         <p className="text-sm sm:text-lg ">Github</p>
