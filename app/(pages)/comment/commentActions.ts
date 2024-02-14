@@ -32,7 +32,8 @@ export async function createComment(formData: FormData) {
   }
 }
 
-export const getComments = unstable_cache(async () => {
+export const getComments = 
+  async () => {
   try {
     // Simulate a delay of seconds
     // await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -62,12 +63,8 @@ export const getComments = unstable_cache(async () => {
       message: `something went wrong, ${error}`,
     };
   }
-},["comments"],
-  { tags: ["comments"] }
+  }
 
-
-
-);
 export async function deleteComment(id: string,
   formData: FormData
 ) {
