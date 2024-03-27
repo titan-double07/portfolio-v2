@@ -59,51 +59,51 @@ export const tools: Tools[] = [
   },
   {
     text: "React",
-    icon: <TbBrandReact className="text-[#58c5ee] " />,
+    icon: <TbBrandReact className="text-[#61dafb] " />,
   },
   {
     text: "TypeScript",
-    icon: <TbBrandTypescript className="icon text-[#58c5ee]" />,
+    icon: <TbBrandTypescript className="icon text-[#0076c6]" />,
   },
   {
     text: "Redux",
-    icon: <TbBrandRedux className="text-[#8712f7]" />,
+    icon: <TbBrandRedux className="text-[#7a50be]" />,
   },
   {
     text: "Framer Motion",
-    icon: <TbBrandFramerMotion className="icon" />,
+    icon: <TbBrandFramerMotion className="text-[#7500e3]" />,
   },
   {
     text: "Tailwind",
-    icon: <TbBrandTailwind className="text-[#58c5ee]" />,
+    icon: <TbBrandTailwind className="text-[#06b6d4]" />,
   },
 
   {
     text: "Bootstrap",
-    icon: <TbBrandBootstrap className="text-[#8712f7]" />,
+    icon: <TbBrandBootstrap className="text-[#7510f6]" />,
   },
 
   {
     text: "mongoDB",
-    icon: <TbBrandMongodb className="icon text-[#4f983f]" />,
+    icon: <TbBrandMongodb className="icon text-[#569134]" />,
   },
 
   {
     text: "NodeJs",
-    icon: <TbBrandNodejs className="icon text-[#4f983f]" />,
+    icon: <TbBrandNodejs className="icon text-[#509941]" />,
   },
   {
     text: "Javascript",
-    icon: <TbBrandJavascript className="text-[#f5de19]" />,
+    icon: <TbBrandJavascript className="text-[#efd81d]" />,
   },
   {
     text: "CSS",
-    icon: <TbBrandCss3 className="text-[#58c5ee]" />,
+    icon: <TbBrandCss3 className="text-[#3a9bdc]" />,
   },
 
   {
     text: "HTML",
-    icon: <TbBrandHtml5 className="text-[orangered]" />,
+    icon: <TbBrandHtml5 className="text-[#e5532d]" />,
   },
   {
     text: "Figma",
@@ -111,7 +111,7 @@ export const tools: Tools[] = [
   },
   {
     text: "Photoshop",
-    icon: <DiPhotoshop className="" />,
+    icon: <DiPhotoshop className="text-[#2fa3f7]" />,
   },
 ];
 
@@ -157,18 +157,31 @@ export const aboutPageData: AboutPageData = {
   ],
   experience: [
     {
+      company: "The Pake Group",
+      position: "front-end developer ",
+      employmentType: "contract",
+      date: "FEB - MAR, 2024",
+      description: [
+        "Worked with the team to speed up the developement process of the frontend of the NoSlag website (a inventory management system) before the fast approaching deadline. ",
+        "Added a feature were the users would be able to transfer their data from a spreadsheet to the database, making the onboarding process easier for the users. ",
+        "Further boosted my proficiency with Next.Js as I had to learn to use the NextJs pages directory, contrary to the app directory that was used to. I also had to pick up emotionsCSS for the styling of the web application.",
+      ],
+    },
+    {
       company: "AtlasMkt",
       position: "front-end developer ",
+      employmentType: "freelance",
       date: "NOV - DEC, 2023",
       description: [
-        "Developed and implemented user-facing features for their web applications ",
+        "Developed and implemented user-facing features for their atlasmkt web application (product management system). ",
         "Ensured proper API integration, making sure it functioned properly and as expected",
-        "Further boosted my proficiency with Next.Js as I encountered bugs and resolved those bug by seeking out more knowlege and better understanding next.js",
+        "Further boosted my proficiency with Next.Js as I encountered problems and resolved those problems by seeking out more knowlege and better understanding of Next.Js",
       ],
     },
     {
       company: "Zuri Team",
-      position: "web developer internship",
+      position: "web developer Apprentice",
+      employmentType: "Apprenticeship",
       date: "AUG, 2022",
       description: [
         "Developed user - facing features and implemented interactive functionalities for web applications using HTML, CSS, and JavaScript.",
@@ -179,6 +192,7 @@ export const aboutPageData: AboutPageData = {
     {
       company: "Seplat Energy",
       position: "public relations officer",
+      employmentType: "freelance",
       date: "AUG, 2019",
       description: [
         "Worked with the community relations department at Seplat energy community development program for ohaji egbema in Owerri imo state",

@@ -7,11 +7,13 @@ export type AppState = {
   currentTab: string;
   currentPage: string;
 };
+// Define the initial state using that type
 const intialState: AppState = {
   isOpen: false,
   currentTab: "about",
   currentPage: "/",
 };
+
 
 export const appSlice = createSlice({
   name: "app",

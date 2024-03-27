@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tools } from '@/app/types/types'
+import type { Tools } from '@/app/types/types'
 
 export default function Tools({ tools }: { tools: Tools[] }) {
   // console.log(tools)

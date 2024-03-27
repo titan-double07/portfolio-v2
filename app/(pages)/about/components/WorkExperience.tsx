@@ -16,13 +16,14 @@ export default function WorkExperience({ experience }: { experience: Experience[
       id="experience"
       className="flex flex-col justify-center items-center gap-6  ">
       {experience.map((experience, index) => {
-        const { company, position, date, description } = experience;
+        const { company, position, date, description,employmentType } = experience;
         return (
           <MotionDiv
             variants={itemVariant}
             key={index}
             className="  p-2 border border-light rounded-lg text-left px-10 ">
             <p className="font-bold capitalize">{position}</p>
+            <p className=" capitalize">{employmentType}</p>
             <p className="pb-2">
               {company} - {date}
             </p>

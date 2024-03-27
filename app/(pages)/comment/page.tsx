@@ -17,8 +17,15 @@ export default async function Contact() {
       animate="show"
       className="container py-6 sm:py-10 flex flex-col gap-8  ">
       <section className="  contact-section  flex flex-col items-center justify-center gap-5 text-center">
-     
-        <p className="mb-2"> {`You're also free to leave a comment as well`}</p>
+        <p className="mb-2 flex flex-col">
+          <span>{`You're also free to leave a comment as well`}</span>
+
+          <span className="text-sm">
+            {" "}
+            {`(tell me what you think about the site, your ideas, anything 🤷 )`}
+          </span>
+        </p>
+
         <CommentForm />
         <br />
       </section>

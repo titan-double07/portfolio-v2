@@ -1,5 +1,5 @@
 import { MotionSection,m ,MotionA} from '@/app/lib/framer-motion/motionComponents';
-import { Certification } from '@/app/types/types';
+import type { Certification } from '@/app/types/types';
 import React from 'react'
 import { PiCertificate } from 'react-icons/pi';
 import {

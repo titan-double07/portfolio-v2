@@ -15,7 +15,11 @@ const ysabeau = Ysabeau({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Developer Portfolio",
+  title: {
+    default: "Developer Portfolio",
+    // this way we can interpolate the default title with a specificpage title
+    template: "%s | Chisom Okereke",
+  },
   description: "Get a glimpse of my skills as a web developer",
 };
 

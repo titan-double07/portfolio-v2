@@ -43,6 +43,7 @@ export type Experience = {
     position: string;
     date: string;
     description: string[];
+    employmentType: string
 };
 //define types for skills in aboutPageData
 export type Skill = {
