@@ -6,9 +6,14 @@ import {
   MotionDiv,
   itemVariant,
 } from "@/app/lib/framer-motion/motionComponents";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Leave a Comment",
+  description: "you are free to leave a comment as well",
+};
 export default async function Contact() {
   const comments = await getComments();
+  
   // console.log(comments);
   return (
     <MotionDiv

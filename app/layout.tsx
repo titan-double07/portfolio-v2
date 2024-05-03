@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Developer Portfolio",
+    default: "Chisom OKereke's Developer Portfolio",
     // this way we can interpolate the default title with a specificpage title
     template: "%s | Chisom Okereke",
   },

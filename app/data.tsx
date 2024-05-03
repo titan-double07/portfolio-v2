@@ -119,9 +119,11 @@ export const aboutPageData: AboutPageData = {
   about: {
     description: [
       `My ultimate goal is to use my web development skills to help others by solving problems and making their lives easier. I am aware that this will require hard work, dedication, and a willingness to learn, but I'm excited about the possibilities that lie ahead 💯😁.`,
+
       `I began my journey into the world of web development in 2021, but it wasn't until 2022 that I decided to take it seriously and fully commit myself to it. Despite the challenges I faced along the way, I found myself falling in love with the process.`,
 
       `At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I refused to give up. I persisted and continued to push forward, one step at a time 💪, until I realized how much I had grown. Looking back, I'm proud of the progress I have made and how far I have come 😌.`,
+      
       `During my leisure time, I enjoy swimming 🏊‍♂️, reading(manga😅), listening to music and audiobooks, watching movies, drawing, and playing games and of course coding 👨‍💻. Although I've had to reduce the amount of time I spend on these activities, I accept it as a small sacrifice to achieve my goal of becoming a developer.`,
     ],
     education: {

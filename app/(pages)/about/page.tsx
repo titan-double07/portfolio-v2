@@ -10,10 +10,10 @@ import {
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
+  description:
+    "Get to know me better, my skills, experience and certifications",
 };
 export default function About() {
-  // const { about, certifications, experience, skills }: AboutPageData =
-  //   aboutPageData;
 
   return (
     <MotionDiv
