@@ -36,7 +36,7 @@ export default function page() {
         </h2>
         <p>
           As a web developer, my goal is simple: to build visually appealing and
-          user-centric websites/web apps that leave a positive impression and
+          user-centric websites/web apps that leave a positive impression on the user and
           works seamlessly well, delivering projects on time, with clean and
           concise code
         </p>

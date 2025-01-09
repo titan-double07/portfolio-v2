@@ -164,7 +164,7 @@ export const aboutPageData: AboutPageData = {
       employmentType: "contract",
       date: "FEB - MAR, 2024",
       description: [
-        "Worked with the team to speed up the developement process of the frontend of the NoSlag website (a inventory management system) before the fast approaching deadline. ",
+        "Worked with the team to speed up the developement process of the frontend of the NoSlag website (an inventory management system) before the fast approaching deadline. ",
         "Added a feature were the users would be able to transfer their data from a spreadsheet to the database, making the onboarding process easier for the users. ",
         "Further boosted my proficiency with Next.Js as I had to learn to use the NextJs pages directory, contrary to the app directory that was used to. I also had to pick up emotionsCSS for the styling of the web application.",
       ],

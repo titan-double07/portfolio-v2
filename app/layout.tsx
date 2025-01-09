@@ -11,16 +11,54 @@ import Profile from "./components/Profile";
 import SplashScreen from "./components/SplashScreen";
 import LazyMotion from "./lib/framer-motion/LazyMotion";
 import { MotionDiv, m } from "./lib/framer-motion/motionComponents";
+import { Metadata } from "next";
 const ysabeau = Ysabeau({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
-    default: "Chisom OKereke's Developer Portfolio",
+    default: "Chisom Okereke's Developer Portfolio",
     // this way we can interpolate the default title with a specificpage title
     template: "%s | Chisom Okereke",
   },
   description: "Get a glimpse of my skills as a web developer",
+  keywords: [
+    "frontend developer",
+    "frontend web developer",
+    "web developer",
+    "web designer",
+    "front-end",
+    "developer",
+    "fullstack developer",
+    "fullstack web developer",
+    "react",
+    "nextjs",
+    "typescript",
+    "javascript",
+    "nodejs",
+    "node",
+    "front-end web developer",
+    "frontend sofware engineer",
+    "software engineer",
+    "web development",
+    "software development",
+  ],
+  openGraph: {
+    title: "Chisom Okereke's Developer Portfolio",
+    description: "Get a glimpse of my skills as a web developer",
+    url: "https://chisomwebdev.vercel.app",
+    images: [
+      {
+        url: "https://chisomwebdev.vercel.app/og.png",
+        width: 800,
+        height: 600,
+        alt: "Chisom Okereke's Developer Portfolio",
+        type: "image/png",
+      }
+    ],
+    siteName: "Chisom Okereke's Developer Portfolio",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
