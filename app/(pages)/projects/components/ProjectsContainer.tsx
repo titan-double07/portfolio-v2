@@ -10,7 +10,7 @@ export default function ProjectsContainer() {
       variants={containerVariant}
       initial="hidden"
       animate="show"
-      className="flex flex-col lg:flex-wrap lg:flex-row justify-center items-center gap-8 pt-10 w-full ">
+      className="flex flex-col lg:flex-wrap lg:flex-row justify-center items-center gap-8 pt-10  ">
       {projects.map((project, index) => {
         const { title, description, image, tools, url, gitUrl } = project;
         // console.log(gitUrl)
@@ -18,7 +18,7 @@ export default function ProjectsContainer() {
           <MotionLi
             variants={itemVariant}
             key={index}
-            className="relative border w-full  lg:w-[300px] flex flex-col   rounded-lg h-[400px] ">
+            className="relative border w-full  flex flex-col   rounded-lg h-[400px] ">
             <div className="relative w-full  h-1/2 ">
               <Image
                 src={image}

@@ -99,7 +99,7 @@ export default function SplashScreen({
     <AnimatePresence mode="wait">
       {isAnimating ? (
         <div className=" bg-dark absolute inset-0 h-screen  ">
-          <m.div
+          {/* <m.div
             ref={scope}
             key={"loading"}
             initial={{ opacity: 0 }}
@@ -182,7 +182,7 @@ export default function SplashScreen({
                 strokeLinejoin="round"
               />
             </svg>
-          </m.div>
+          </m.div> */}
         </div>
       ) : (
         <React.Fragment key={"children"}>{children}</React.Fragment>

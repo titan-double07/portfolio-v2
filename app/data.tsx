@@ -51,80 +51,93 @@ export const links: Link[] = [
     icon: <FaCommentDots />,
   },
 ];
-
+// TODO: Add more tools; UUpdate skills page
 export const tools: Tools[] = [
+  {
+    text: "Figma",
+    icon: <TbBrandFigma className="" />,
+    category: "design",
+  },
+  {
+    text: "Photoshop",
+    icon: <DiPhotoshop className="text-[#2fa3f7]" />,
+    category: "design",
+  },
   {
     text: "NextJs",
     icon: <TbBrandNextjs className="icon " />,
+    category: "front-end",
   },
   {
     text: "React",
     icon: <TbBrandReact className="text-[#61dafb] " />,
+    category: "front-end",
   },
   {
     text: "TypeScript",
     icon: <TbBrandTypescript className="icon text-[#0076c6]" />,
+    category: "front-end",
   },
   {
     text: "Redux",
     icon: <TbBrandRedux className="text-[#7a50be]" />,
+    category: "front-end",
   },
   {
     text: "Framer Motion",
     icon: <TbBrandFramerMotion className="text-[#7500e3]" />,
+    category: "front-end",
   },
   {
     text: "Tailwind",
     icon: <TbBrandTailwind className="text-[#06b6d4]" />,
+    category: "front-end",
   },
 
   {
     text: "Bootstrap",
     icon: <TbBrandBootstrap className="text-[#7510f6]" />,
-  },
-
-  {
-    text: "mongoDB",
-    icon: <TbBrandMongodb className="icon text-[#569134]" />,
-  },
-
-  {
-    text: "NodeJs",
-    icon: <TbBrandNodejs className="icon text-[#509941]" />,
+    category: "front-end",
   },
   {
     text: "Javascript",
     icon: <TbBrandJavascript className="text-[#efd81d]" />,
+    category: "front-end",
   },
   {
     text: "CSS",
     icon: <TbBrandCss3 className="text-[#3a9bdc]" />,
+    category: "front-end",
   },
 
   {
     text: "HTML",
     icon: <TbBrandHtml5 className="text-[#e5532d]" />,
+    category: "front-end",
   },
+
   {
-    text: "Figma",
-    icon: <TbBrandFigma className="" />,
+    text: "mongoDB",
+    icon: <TbBrandMongodb className="icon text-[#569134]" />,
+    category: "front-end",
   },
+
   {
-    text: "Photoshop",
-    icon: <DiPhotoshop className="text-[#2fa3f7]" />,
+    text: "NodeJs",
+    icon: <TbBrandNodejs className="icon text-[#509941]" />,
+    category: "back-end",
   },
 ];
 
 export const aboutPageData: AboutPageData = {
   about: {
     description: [
-      `My ultimate goal is to use my web development skills to help others by solving problems and making their lives easier. I am aware that this will require hard work, dedication, and a willingness to learn, but I'm excited about the possibilities that lie ahead 💯😁.`,
+      `I began my web development journey in 2021, committing fully in 2022. At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I persisted one step at a time , I grew to love the process of creating and improving digital experiences. Every hurdle has been a stepping stone, and I'm proud of how much I've accomplished.`,
 
-      `I began my journey into the world of web development in 2021, but it wasn't until 2022 that I decided to take it seriously and fully commit myself to it. Despite the challenges I faced along the way, I found myself falling in love with the process.`,
+      `My ultimate goal as a web developer is to use my skills to solve problems and improve lives through user-centric solutions. I am dedicated to working hard, staying curious, and embracing continuous learning to unlock new possibilities in technology.`,
 
-      `At times, I felt overwhelmed by the amount of knowledge I needed to acquire 🤯, but I refused to give up. I persisted and continued to push forward, one step at a time 💪, until I realized how much I had grown. Looking back, I'm proud of the progress I have made and how far I have come 😌.`,
-      
-      `During my leisure time, I enjoy swimming 🏊‍♂️, reading(manga😅), listening to music and audiobooks, watching movies, drawing, and playing games and of course coding 👨‍💻. Although I've had to reduce the amount of time I spend on these activities, I accept it as a small sacrifice to achieve my goal of becoming a developer.`,
+      `When I'm not coding, I enjoy swimming 🏊‍♂️, reading manga, listening to audiobooks and music 👂, watching movies 🍿, drawing, and gaming 🎮. While I've scaled back on these activities to focus on my career, they remain integral to my creativity and balance.
+`,
     ],
     education: {
       institution: "Federal University of Technology,Owerri",
@@ -160,45 +173,80 @@ export const aboutPageData: AboutPageData = {
   experience: [
     {
       company: "The Pake Group",
-      position: "front-end developer ",
-      employmentType: "contract",
-      date: "FEB - MAR, 2024",
-      description: [
-        "Worked with the team to speed up the developement process of the frontend of the NoSlag website (an inventory management system) before the fast approaching deadline. ",
-        "Added a feature were the users would be able to transfer their data from a spreadsheet to the database, making the onboarding process easier for the users. ",
-        "Further boosted my proficiency with Next.Js as I had to learn to use the NextJs pages directory, contrary to the app directory that was used to. I also had to pick up emotionsCSS for the styling of the web application.",
+      employmentType: "full-time",
+      details: [
+        {
+          role: "project manager",
+          date: "JUL 2024 - Present",
+          description: [
+            `Orchestrated project planning and execution, coordinating cross-functional efforts between frontend,
+backend, and design teams to ensure seamless feature development.`,
+            `Monitored project progress using tools like Jira and Trello, implementing necessary adjustments to maintain alignment with timelines and deliverables, leading to successful and timely completion.
+`,
+            `Facilitated communication between stakeholders and technical teams, ensuring clarity on project goals and priorities to avoid delays or misalignments.
+`,
+          ],
+        },
+        {
+          role: "front-end developer",
+          date: "FEB 2024 - Present",
+          description: [
+            `Developed and maintained a real estate management solution app, integrating multiple APIs, including CMS APIs, Google Maps, Socket.io, and Next-Auth, to deliver a comprehensive platform for real estate services.
+`,
+            `Revamped the RCCGHE website, improving user experience with intuitive design updates and incorporating user feedback to refine the interface.
+`,
+            `Accelerated the development of the NoSlag web app (an inventory management system) to meet tight deadlines, focusing on performance optimization and feature delivery.`,
+            `Implemented a data transfer feature to allow users to import Excel data directly into the app, streamlining the onboarding process and reducing manual input efforts.
+`,
+            `Adapted swiftly to using the Next.js pages directory and resolved critical bugs preventing TailwindCSS functionality, ensuring codebase compatibility and improved styling performance.
+`,
+            `Optimized user interfaces, refining designs based on user feedback to enhance interactivity and satisfaction.`,
+          ],
+        },
       ],
     },
     {
       company: "AtlasMkt",
-      position: "front-end developer ",
-      employmentType: "freelance",
-      date: "NOV - DEC, 2023",
-      description: [
-        "Developed and implemented user-facing features for their atlasmkt web application (product management system). ",
-        "Ensured proper API integration, making sure it functioned properly and as expected",
-        "Further boosted my proficiency with Next.Js as I encountered problems and resolved those problems by seeking out more knowlege and better understanding of Next.Js",
+      employmentType: "contract",
+      details: [
+        {
+          role: "front-end developer ",
+          date: "NOV - DEC 2023",
+          description: [
+            "Developed and implemented user-facing features for their atlasmkt web application (product management system). ",
+            "Ensured proper backend API integration, making sure it functioned properly and as expected",
+            "Further boosted my proficiency with Next.Js as I encountered problems and resolved those problems by seeking out more knowlege and better understanding of Next.Js",
+          ],
+        },
       ],
     },
     {
       company: "Zuri Team",
-      position: "web developer Apprentice",
       employmentType: "Apprenticeship",
-      date: "AUG, 2022",
-      description: [
-        "Developed user - facing features and implemented interactive functionalities for web applications using HTML, CSS, and JavaScript.",
-        "Gained knowledge in interactive and responsive web development",
-        "Worked on various projects using Html, CSS, and JavaScript.",
+      details: [
+        {
+          role: "web developer Apprentice",
+          date: "AUG 2022",
+          description: [
+            "Developed user - facing features and implemented interactive functionalities for web applications using HTML, CSS, and JavaScript.",
+            "Gained knowledge in interactive and responsive web development",
+            "Worked on various projects using Html, CSS, and JavaScript.",
+          ],
+        },
       ],
     },
     {
       company: "Seplat Energy",
-      position: "public relations officer",
       employmentType: "freelance",
-      date: "AUG, 2019",
-      description: [
-        "Worked with the community relations department at Seplat energy community development program for ohaji egbema in Owerri imo state",
-        "Gained better knowledge and experience in communication and dealing with people",
+      details: [
+        {
+          role: "public relations officer",
+          date: "AUG, 2019",
+          description: [
+            "Worked with the community relations department at Seplat energy community development program for ohaji egbema in Owerri imo state",
+            "Gained better knowledge and experience in communication and dealing with people",
+          ],
+        },
       ],
     },
   ],

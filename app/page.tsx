@@ -1,11 +1,7 @@
 import React from "react";
 import Tools from "./components/Tools";
 import Link from "next/link";
-import {
-  MotionDiv,
-  MotionLink,
-
-} from "./lib/framer-motion/motionComponents";
+import { MotionDiv, MotionLink } from "./lib/framer-motion/motionComponents";
 import { Variants } from "framer-motion";
 
 export default function page() {
@@ -35,10 +31,11 @@ export default function page() {
           web developer
         </h2>
         <p>
-          As a web developer, my goal is simple: to build visually appealing and
-          user-centric websites/web apps that leave a positive impression on the user and
-          works seamlessly well, delivering projects on time, with clean and
-          concise code
+          {`  Hi, I develop functional, responsive and
+          user-friendly websites. Whether you're a business seeking innovative
+          web solutions or a team looking for a skilled developer, I specialize
+          in technologies like React.js, Next.js, and TypeScript to deliver
+          exceptional digital experiences.`}
         </p>
       </MotionDiv>
       <Tools />
@@ -54,4 +51,3 @@ export default function page() {
     </div>
   );
 }
-

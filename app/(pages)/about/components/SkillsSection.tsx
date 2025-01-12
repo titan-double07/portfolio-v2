@@ -15,7 +15,8 @@ export default function SkillsSection({ skills }: { skills: Skill[] }) {
       initial="hidden"
       animate="show"
       id="skills"
-      className="flex flex-col justify-center items-center gap-6 w-full lg:flex-wrap lg:flex-row">
+      className="grid grid-cols-1 lg:grid-cols-2  gap-5 w-full">
+      
       {skills.map((skill, index) => {
         const toBold = [
           "html",
@@ -57,7 +58,7 @@ export default function SkillsSection({ skills }: { skills: Skill[] }) {
           <MotionDiv
             variants={itemVariant}
             key={index}
-            className="border rounded-lg p-4 lg:w-[300px] lg:h-[300px] lg:overflow-auto ">
+            className="border rounded-lg p-4  lg:h-[300px] lg:overflow-auto ">
             <h3 className="font-bold capitalize text-xl subpixel-antialiased">
               {name}
             </h3>
