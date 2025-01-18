@@ -1,27 +1,30 @@
+import { DiPhotoshop } from "react-icons/di";
 import {
+  FaCommentDots,
+  FaGitAlt,
   FaHome,
   FaSuitcase,
+  FaTrello,
   FaUserAstronaut,
-  FaCommentDots,
 } from "react-icons/fa";
 import {
   TbBrandBootstrap,
+  TbBrandCss3,
+  TbBrandFigma,
   TbBrandFramerMotion,
   TbBrandHtml5,
+  TbBrandJavascript,
   TbBrandMongodb,
+  TbBrandMysql,
   TbBrandNextjs,
   TbBrandNodejs,
   TbBrandReact,
   TbBrandRedux,
   TbBrandTailwind,
   TbBrandTypescript,
-  TbBrandJavascript,
-  TbBrandCss3,
-  TbBrandFigma,
 } from "react-icons/tb";
-import { DiPhotoshop } from "react-icons/di";
 
-import { SiReactquery } from "react-icons/si";
+import { SiJira, SiPostgresql } from "react-icons/si";
 
 import { AboutPageData, Link, Project, Tools } from "./types/types";
 
@@ -51,7 +54,6 @@ export const links: Link[] = [
     icon: <FaCommentDots />,
   },
 ];
-// TODO: Add more tools; UUpdate skills page
 export const tools: Tools[] = [
   {
     text: "Figma",
@@ -117,15 +119,40 @@ export const tools: Tools[] = [
   },
 
   {
-    text: "mongoDB",
-    icon: <TbBrandMongodb className="icon text-[#569134]" />,
-    category: "front-end",
-  },
-
-  {
     text: "NodeJs",
     icon: <TbBrandNodejs className="icon text-[#509941]" />,
     category: "back-end",
+  },
+  {
+    text: "mongoDB",
+    icon: <TbBrandMongodb className="icon text-[#569134]" />,
+    category: "back-end",
+  },
+  {
+    text: "postgresql",
+    icon: <SiPostgresql className="icon text-[#689dc9]" />,
+    category: "back-end",
+  },
+  {
+    text: "MySQL",
+    icon: <TbBrandMysql className="icon text-[#007598]" />,
+    category: "back-end",
+  },
+
+  {
+    text: "Git/Github",
+    icon: <FaGitAlt className="icon text-[#e94d32]" />,
+    category: "workflow & collaboration",
+  },
+  {
+    text: "Jira",
+    icon: <SiJira className="icon text-[#357de8]" />,
+    category: "workflow & collaboration",
+  },
+  {
+    text: "Trello",
+    icon: <FaTrello className="icon text-[#0080cb]" />,
+    category: "workflow & collaboration",
   },
 ];
 
@@ -250,34 +277,29 @@ backend, and design teams to ensure seamless feature development.`,
       ],
     },
   ],
+  // TODO: Rewrite skills description
   skills: [
     {
       name: "Front-End Development",
-      description: `Proficiency with the basics of front-end development, grounded with the knowlegde of HTML, CSS, and javaScript to build user-friendly and responsive web applications.`,
+      description: `I specialize in developing dynamic, user-friendly web applications that deliver exceptional user experiences. By leveraging modern frameworks and libraries, I ensure seamless functionality, responsive designs, and optimal performance. My focus is on writing clean, maintainable code and implementing advanced features to meet project goals.`,
+      tools: tools.filter((tool) => tool.category === "front-end"),
     },
     {
       name: "Web Design",
-      description: `With tools such as figma and photoshop and the knowledge of design principles and user-centered design techniques to create visually appealing and intuitive interfaces.`,
+      description: `I have a foundational understanding of creating visually appealing and user-friendly designs. Using tools like Figma and Photoshop, I focus on developing layouts and prototypes that prioritize functionality and user needs. I’m eager to continue refining my design skills to deliver more engaging and accessible digital experiences just as i did with this portfoilio and professional projects.`,
+      tools: tools.filter((tool) => tool.category === "design"),
     },
     {
-      name: "CSS Framwork",
-      description: `Taking my CSS skills to the next level, I acqured the knowledge of CSS frameworks such as bootstrap and tailwind CSS, that helped me boost my production time.`,
+      name: "Back-End Development",
+      description: `I have foundational experience in building server-side applications and managing databases to support dynamic web applications. My work includes developing simple APIs, managing data flow, and integrating back-end systems with front-end interfaces to deliver full-stack solutions.`,
+      tools: tools.filter((tool) => tool.category === "back-end"),
     },
     {
-      name: "JavaScript Framework/Library",
-      description: `Another boost to my skill set, i also acquired the knowledge of JavaScript framework/libraries such as react.js, and next.js that helped me to build more dynamic web applications more efficiently and quickly.`,
-    },
-    {
-      name: "Animation with Framer Motion",
-      description: `With the incorporation of framer motion with react.js, i can breathe life into any web application, with intuitive and captivating animations.`,
-    },
-    {
-      name: "Version Control",
-      description: `Proficiency in using GIT for source code management and collaboration.`,
-    },
-    {
-      name: "API Integration and Database Management",
-      description: `strong experience with in integrating RESTful APIs to fetch and display data from databases (mongoDB, MYSQL,) in web applications.`,
+      name: "Workflow & Collaboration",
+      description: `I utilize tools and methodologies to streamline workflows, manage projects effectively, and enhance team collaboration. By ensuring smooth version control, efficient task tracking, and clear communication, I help deliver projects on time while maintaining high standards.`,
+      tools: tools.filter(
+        (tool) => tool.category === "workflow & collaboration"
+      ),
     },
   ],
 };

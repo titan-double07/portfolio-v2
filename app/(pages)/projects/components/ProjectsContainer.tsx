@@ -10,7 +10,7 @@ export default function ProjectsContainer() {
       variants={containerVariant}
       initial="hidden"
       animate="show"
-      className="flex flex-col lg:flex-wrap lg:flex-row justify-center items-center gap-8 pt-10  ">
+      className="grid grid-cols-1 lg:grid-cols-2  gap-5 w-full pt-10  ">
       {projects.map((project, index) => {
         const { title, description, image, tools, url, gitUrl } = project;
         // console.log(gitUrl)

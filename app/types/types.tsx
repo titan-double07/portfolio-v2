@@ -15,7 +15,7 @@ export type Link = {
 export type Tools = {
   text: string;
   icon: Icon;
-  category?: "front-end"|"back-end"|"design"|"others"
+  category?: "front-end"|"back-end"|"design"|"workflow & collaboration"
 };
 
 //define types  for the aboutPageData
@@ -52,7 +52,7 @@ export type Experience = {
 export type Skill = {
   name: string;
   description: string;
-
+tools: Tools[]
 };
 
 export type AboutPageData = {
