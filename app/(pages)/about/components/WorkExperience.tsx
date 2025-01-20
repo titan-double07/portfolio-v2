@@ -44,7 +44,7 @@ export default function WorkExperience({
                       return (
                         <li
                           key={i}
-                          className="text-light/70 text-sm sm:text-base list-disc  leading-relaxed">
+                          className="text-light/75 text-sm sm:text-base list-disc  leading-relaxed">
                           {desc}
                         </li>
                       );

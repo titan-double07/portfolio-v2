@@ -64,7 +64,7 @@ export default function SkillsSection({ skills }: { skills: Skill[] }) {
               {name}
             </h3>
             <hr className=" border-light/50 my-2" />
-            <p className="text-light/70 text-sm pb-2  subpixel-antialiased">
+            <p className="text-light/75 text-sm pb-2  subpixel-antialiased">
               {description}
             </p>
             <hr className=" border-light/50 my-2" />

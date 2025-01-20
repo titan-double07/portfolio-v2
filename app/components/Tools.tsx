@@ -23,10 +23,10 @@ const [scope, animate] = useAnimate();
             <MotionDiv
               key={index}
               className="tool flex flex-col items-center ">
-              <i key={index} className="text-3xl sm:text-4xl">
+              <i key={index} className="text-3xl ">
                 {icon}
               </i>
-              <p className="text-sm sm:text-lg ">{text}</p>
+              <p className="text-sm sm:text-base ">{text}</p>
             </MotionDiv>
           );
         })}

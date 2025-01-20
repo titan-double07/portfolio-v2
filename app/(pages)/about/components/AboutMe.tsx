@@ -35,7 +35,7 @@ export default function AboutMe({
       initial="hidden"
       animate="show"
       id="about"
-      className="flex flex-col gap-4 lg:px-10  ">
+      className="flex flex-col gap-4   ">
       {description.map((desc, index) => {
         return (
           <MotionP

@@ -20,7 +20,7 @@ export default function page() {
     },
   };
   return (
-    <div className="w-full flex flex-col items-center xl:justify-center text-center container h-full pt-8 pb-5 sm:pt-10  ">
+    <div className="w-full flex flex-col items-center xl:justify-center text-center container pt-8 pb-5   ">
       <MotionDiv
         initial={"hidden"}
         animate="visible"
