@@ -29,13 +29,13 @@ export default function WorkExperience({
             key={index}
             className="  p-2 border border-light rounded-lg text-left px-10 ">
             <p className="">{company}</p>
-            <p className=" capitalize pb-2">{employmentType}</p>
+            <p className=" capitalize pb-2 text-sm ">{employmentType}</p>
             {details.map((item, i) => {
               const { description, date, role } = item;
               return (
                 <div key={i} className="pb-2">
-                  <p className="capitalize flex justify-between">
-                    <span>{role}</span> <span>{date}</span>
+                  <p className="capitalize md:flex-row flex-col flex justify-between">
+                    <span>{role}</span> <span className="text-base">{date}</span>
                   </p>
                   <ul
                     key={i}

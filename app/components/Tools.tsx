@@ -14,7 +14,7 @@ const [scope, animate] = useAnimate();
       ref={scope}
       initial={{ opacity: 0, }}
       animate={{ opacity: 1, }}
-      className="  flex flex-wrap justify-center gap-8 pt-10 lg:w-4/5 ">
+      className="  flex flex-wrap justify-center gap-8 md:pt-10 pt-6 lg:w-4/5 ">
       {tools &&
         tools?.map((tool, index) => {
           const { icon, text } = tool;

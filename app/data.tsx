@@ -277,7 +277,6 @@ backend, and design teams to ensure seamless feature development.`,
       ],
     },
   ],
-  // TODO: Rewrite skills description
   skills: [
     {
       name: "Front-End Development",
@@ -305,6 +304,55 @@ backend, and design teams to ensure seamless feature development.`,
 };
 
 export const projects: Project[] = [
+  {
+    url: "https://pake-estate-admin.vercel.app/",
+    title: "CMS Admin Dashboard",
+    image: "",
+    description: "",
+    tools: [
+      {
+        text: "Next.js",
+        icon: <TbBrandNextjs className="icon " />,
+      },
+      {
+        text: "Tailwind",
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
+      },
+    ],
+  },
+  {
+    url: "https://dv-autos-frontend.vercel.app/",
+    title: "DV Autos",
+    image: "",
+    description: "",
+    tools: [
+      {
+        text: "Next.js",
+        icon: <TbBrandNextjs className="icon " />,
+      },
+      {
+        text: "Tailwind",
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
+      },
+    ],
+  },
+  {
+    url: "https://rccghge-website-revamp.vercel.app/",
+    title: "RCCGHGE Website Revamp",
+    image: "/images/rccghge-revamp.png",
+    description: "",
+    tools: [
+      {
+        text: "Next.js",
+        icon: <TbBrandNextjs className="icon " />,
+      },
+      {
+        text: "Tailwind",
+        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
+      },
+    ],
+  },
+  // loopstudios landing page
   {
     url: "https://loopstudios-titanweb.vercel.app/",
     gitUrl: "https://github.com/titan-double07/loopstudios-landing-page",
@@ -394,22 +442,22 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    url: "https://ecommerce-product-page-nine-mauve.vercel.app/",
-    gitUrl: "https://github.com/titan-double07/ecommerce-product-page",
-    title: "Ecommerce product page",
-    image: "/images/ecommerce-product-page.png",
-    description:
-      "An e-commerce product page challenge from frontendmentor.io showcasing my proficiency with React hooks such as useState, useReducer, useContext, etc. This will help me better understand React.",
-    tools: [
-      {
-        text: "React",
-        icon: <TbBrandReact className="text-[#58c5ee] " />,
-      },
-      {
-        text: "Tailwind",
-        icon: <TbBrandTailwind className="text-[#58c5ee]" />,
-      },
-    ],
-  },
+  // {
+  //   url: "https://ecommerce-product-page-nine-mauve.vercel.app/",
+  //   gitUrl: "https://github.com/titan-double07/ecommerce-product-page",
+  //   title: "Ecommerce product page",
+  //   image: "/images/ecommerce-product-page.png",
+  //   description:
+  //     "An e-commerce product page challenge from frontendmentor.io showcasing my proficiency with React hooks such as useState, useReducer, useContext, etc. This will help me better understand React.",
+  //   tools: [
+  //     {
+  //       text: "React",
+  //       icon: <TbBrandReact className="text-[#58c5ee] " />,
+  //     },
+  //     {
+  //       text: "Tailwind",
+  //       icon: <TbBrandTailwind className="text-[#58c5ee]" />,
+  //     },
+  //   ],
+  // },
 ];

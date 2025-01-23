@@ -21,7 +21,7 @@ export default function ProjectsContainer() {
             className="relative border w-full  flex flex-col   rounded-lg h-[400px] ">
             <div className="relative w-full  h-1/2 ">
               <Image
-                src={image}
+                src={image||'/placeholder-img.png'}
                 alt={title}
                 fill
                 className="rounded-t-lg object-cover h-full object-top"
