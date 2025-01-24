@@ -307,8 +307,9 @@ export const projects: Project[] = [
   {
     url: "https://pake-estate-admin.vercel.app/",
     title: "CMS Admin Dashboard",
-    image: "",
-    description: "",
+    image: "/images/pake-estate-admin-dashboard.png",
+    description:
+      " A CMS admin dashboard for a real estate management solution app. The dashboard provides an intuitive interface for managing properties, users, and other essential data. It features responsive design, interactive elements, and seamless navigation to enhance user experience and productivity.",
     tools: [
       {
         text: "Next.js",
@@ -321,10 +322,11 @@ export const projects: Project[] = [
     ],
   },
   {
-    url: "https://dv-autos-frontend.vercel.app/",
+    url: "https://www.davistarauto.com/",
     title: "DV Autos",
-    image: "",
-    description: "",
+    image: "/images/davistarauto.png",
+    description:
+      "This is a website for a car dealership company. The site showcases the company's services, inventory, and contact information in a clean and user-friendly design. The site is fully responsive and optimized for various devices, ensuring a seamless browsing experience for visitors.",
     tools: [
       {
         text: "Next.js",
@@ -340,7 +342,8 @@ export const projects: Project[] = [
     url: "https://rccghge-website-revamp.vercel.app/",
     title: "RCCGHGE Website Revamp",
     image: "/images/rccghge-revamp.png",
-    description: "",
+    description:
+      " This is an upgraded version of the RCCGHGE church website. The site features a modern design, improved user experience, and enhanced functionality. The site is fully responsive and optimized for various devices, ensuring a seamless browsing experience for visitors.",
     tools: [
       {
         text: "Next.js",
@@ -359,7 +362,7 @@ export const projects: Project[] = [
     title: "Loopstudios landing page",
     image: "/images/loopstudios-desktop-min.png",
     description:
-      "LoopStudios' landing page is built using Next.js and Tailwind CSS. The Unsplash API has been used to provide beautiful images, and the Framer Motion animation has brought the app to life. The result is a simple yet interesting design that is reminiscent of the biblical story of God breathing life into man.",
+      "This is a landing page challenge from frontendmentor.io showcasing my proficiency with Next.js and Framer Motion. This project helped me better understand the use of Framer Motion in creating animations and transitions.",
 
     tools: [
       {
@@ -381,12 +384,29 @@ export const projects: Project[] = [
     ],
   },
   {
+    url: "https://old-portfolio-v1.vercel.app/",
+    gitUrl: "https://github.com/titan-double07/portfolio",
+    title: "Old Portfolio Website",
+    image: "/images/portfolio-img.png",
+    description: `This is my first version of my portfolio website, which served as a basis for the current version you are looking at. The site showcases my skills, projects, and contact information in a clean and user-friendly design.  The site is fully responsive and optimized for various devices, ensuring a seamless browsing experience for visitors.`,
+    tools: [
+      {
+        text: "React",
+        icon: <TbBrandReact className="text-[#58c5ee] " />,
+      },
+      {
+        text: "CSS",
+        icon: <TbBrandCss3 className="text-[#58c5ee]" />,
+      },
+    ],
+  },
+  {
     url: "https://multi-stage-form-beta.vercel.app/",
     gitUrl: "https://github.com/titan-double07/multi-stage-form",
     title: "Multi-stage SignUp Form",
     image: "/images/multi-stage-signUp-form.png",
     description:
-      "The web app features a smooth and responsive multi-stage sign-up form, which is equipped with basic form validation and efficient data collection and tracking capabilities curtsey of React Hook Form library. The app was developed using Next.js and incorporates TailwindCSS for a modern and user-friendly UI/UX design. Additionally, Framer Motion was used to create intuitive and interactive animated transitions throughout the app.",
+      "This is a multi-stage sign-up form that allows users to input their personal information in a step-by-step process. With form validation and error handling to ensure data accuracy. The form is responsive and user-friendly, providing a seamless sign-up experience for users.",
     tools: [
       {
         text: "Next.js",
@@ -408,7 +428,7 @@ export const projects: Project[] = [
     title: "Rock-Paper-Scissors App",
     image: "/images/rock-paper-scissors-app.png",
     description:
-      "Here is a rock-paper-scissors game that you can enjoy during your free time. It provides an engaging gaming experience with seamless user interactions and a stylish design, thanks to FrontendMentor. The game logic is enhanced by the use of Redux for efficient state management, resulting in a smooth user experience. Other tools that were utilized in the development process include React.js and Tailwind. ",
+      "This is a simple and fun rock-paper-scissors game. Users can play against the computer and track their scores, making it a possibly engaging and interactive game for all ages.The app features a clean and intuitive design, with responsive layout and animations to enhance the user experience.",
     tools: [
       {
         text: "React",
@@ -425,23 +445,6 @@ export const projects: Project[] = [
     ],
   },
 
-  {
-    url: "https://old-portfolio-v1.vercel.app/",
-    gitUrl: "https://github.com/titan-double07/portfolio",
-    title: "Old Portfolio Website",
-    image: "/images/portfolio-img.png",
-    description: `This is an older version of my portfolio website. It features a responsive design and an attractive UI, which highlights my progress as a developer. I also meticulously organized the database so that it could be used to populate different pages and make editing more convenient. The website was built using CSS and React.`,
-    tools: [
-      {
-        text: "React",
-        icon: <TbBrandReact className="text-[#58c5ee] " />,
-      },
-      {
-        text: "CSS",
-        icon: <TbBrandCss3 className="text-[#58c5ee]" />,
-      },
-    ],
-  },
   // {
   //   url: "https://ecommerce-product-page-nine-mauve.vercel.app/",
   //   gitUrl: "https://github.com/titan-double07/ecommerce-product-page",

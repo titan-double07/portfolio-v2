@@ -2,7 +2,12 @@ import React from "react";
 import { projects } from "@/app/data";
 import Image from "next/image";
 import Tools from "./Tools";
-import { MotionUl, MotionLi, itemVariant,containerVariant } from "@/app/lib/framer-motion/motionComponents";
+import {
+  MotionUl,
+  MotionLi,
+  itemVariant,
+  containerVariant,
+} from "@/app/lib/framer-motion/motionComponents";
 
 export default function ProjectsContainer() {
   return (
@@ -21,7 +26,7 @@ export default function ProjectsContainer() {
             className="relative border w-full  flex flex-col   rounded-lg h-[400px] ">
             <div className="relative w-full  h-1/2 ">
               <Image
-                src={image||'/placeholder-img.png'}
+                src={image || "/placeholder-img.png"}
                 alt={title}
                 fill
                 className="rounded-t-lg object-cover h-full object-top"
@@ -39,13 +44,15 @@ export default function ProjectsContainer() {
                     rel="noopener noreferrer">
                     live
                   </a>
-                  <a
-                    className="w-16 text-center capitalize  h-fit py-1 text-sm border rounded hover:bg-light/80 hover:text-dark active:scale-90 border-light/70 text-light/70 "
-                    href={gitUrl}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    github
-                  </a>
+                  {gitUrl && (
+                    <a
+                      className="w-16 text-center capitalize  h-fit py-1 text-sm border rounded hover:bg-light/80 hover:text-dark active:scale-90 border-light/70 text-light/70 "
+                      href={gitUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      github
+                    </a>
+                  )}
                 </div>
               </div>
               <hr className=" rounded-full mb-1 border-light/30" />

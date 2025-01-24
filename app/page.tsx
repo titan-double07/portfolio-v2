@@ -49,16 +49,7 @@ export default function page() {
         Download CV
       </MotionLink>
       <Tools />
-      {/* hidden on mobile */}
-      <MotionLink
-        variants={opacityVariant}
-        initial="hidden"
-        animate="visible"
-        transition={{ ...opacityVariant, delay: 4 }}
-        href="https://drive.google.com/file/d/1cXMznTFdK8RXDO1FPuRWD67zv0EhPOUf/view?usp=sharing"
-        className=" text-lg px-10 py-4 font-bold rounded-lg  mt-16 hidden md:block  uppercase  bg-secondary  text-dark hover:border-4 hover:border-tetiary hover:text-tetiary hover:bg-dark active:scale-90 active:border-tetiary/50 xl:hidden ">
-        Download CV
-      </MotionLink>
+    
     </div>
   );
 }
