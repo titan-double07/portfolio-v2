@@ -13,5 +13,13 @@ This project is a personal portfolio website to showcase my projects, skills, an
 - Skills and experience
 - Comment section
 
+## Environment variables
+```env
+# MongoDB connection string
+MONGODB_URI
+
+# Password for deleting comments
+DELETE_PASSWORD
+```
 
 <!-- TODO : add collaborators to project details, add full screen preview (GIF) -->

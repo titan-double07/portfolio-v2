@@ -336,10 +336,14 @@ export const projects: Project[] = [
         text: "Tailwind",
         icon: <TbBrandTailwind className="text-[#58c5ee]" />,
       },
+      {
+        text: "Framer Motion",
+        icon: <TbBrandFramerMotion className="icon" />,
+      },
     ],
   },
   {
-    url: "https://rccghge-website-revamp.vercel.app/",
+    url: "https://rccghge.kouakoudomagni.com/",
     title: "RCCGHGE Website Revamp",
     image: "/images/rccghge-revamp.png",
     description:
@@ -352,6 +356,10 @@ export const projects: Project[] = [
       {
         text: "Tailwind",
         icon: <TbBrandTailwind className="text-[#58c5ee]" />,
+      },
+      {
+        text: "Framer Motion",
+        icon: <TbBrandFramerMotion className="icon" />,
       },
     ],
   },
